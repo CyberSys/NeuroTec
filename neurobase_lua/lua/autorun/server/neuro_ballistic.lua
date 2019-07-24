@@ -1,0 +1,215 @@
+/*********************************************************************/
+/* 																	 */
+/*  					NeuroTec Ballistic Code						 */
+/* 																	 */
+/*********************************************************************/
+
+--Some variables we need
+
+local Meta = FindMetaTable("Entity")
+local g = 600 --Default ource engine gravity force.
+-- local g = -physenv.GetGravity( ).z --To get the server's gravity force.
+local DefaultMinRange = 1  --Min range by default.
+local DefaultMaxRange = TANK_RANGE_aRTILLERY_SHELL  --Max range by default.
+local DefaultLaunchVelocity = AMMO_VELOCITY_aRTILLERY_SHELL  --The default speed we use for artillery.
+local AverageTravellingVelocity = AMMO_VELOCITY_HE_SHELL-- 33500/3 --AMMO_VELOCITY_HE_SHELL  --The default speed we use for common tanks.
+local DefaultAccuracy = 0.0 --It is the default accuracy of the cannon in meters.
+local InMeters = 0.3048/16 //This is constant to convert map grid unit to meters.
+local InFeet = 1/16 //constant to get distances from map unit in feet.
+
+-- local function 
+
+-- function NeuroProjectileEquation( speed, startpos )
+	
+	-- local x = 
+
+-- end 
+
+/* Description of what we are doing
+
+Target: this the entity you aim (use target designator or something else)
+TargetPos: position of your target.
+pos: your current position.
+R: range of your target calculated with the target and your position.
+v0: the initial speed of your shell while firing.
+h: the difference on z axis = height.
+theta: angle of the barrel.
+*/
+
+function Meta:BallisticTargetting(Target) //Use an entity as argument.
+
+	-- local Target = self:GetNetworkedEntity("Target",NULL)
+	
+	if !IsValid(Target) then
+		-- print("No target")
+		return
+	else
+		local TargetPos = Target:GetPos()
+		self:BallisticCalculation(TargetPos)
+	end
+ 
+end
+
+function Meta:BallisticCalculation(TargetPos) //Use a vector as argument.
+		
+		local pos = self:GetPos()
+		if( IsValid( self.Barrel ) && self.BarrelLength ) then
+			
+			pos = self.Barrel:GetPos() + self.Barrel:GetForward() * self.BarrelLength
+			-- print("has barrel")
+		end
+		
+		local R = (TargetPos - pos):Length2D()
+		local h = (TargetPos.z - pos.z)
+			
+		-- print( R )
+		-- print( self.MinRange, self.MaxRange )
+		if self.MinRange==nil then self.MinRange = DefaultMinRange end
+		if self.MaxRange==nil then self.MaxRange = DefaultMaxRange end
+			
+		-- if R*InMeters < self.MinRange then R = self.MinRange/InMeters end
+		-- if R*InMeters > self.MaxRange then R = self.MaxRange/InMeters end
+	
+		
+		-- if( self.TankType == TANK_TYPE_ARTILLERY ) then
+			
+			-- if R < self.MinRange then R = self.MaxRange end
+			-- if R > self.MaxRange then R = self.MinRange end
+			
+		-- else
+			
+			if R < self.MinRange then R = self.MinRange end
+			if R > self.MaxRange then R = self.MaxRange end
+			
+		-- end
+		
+		if self.Accuracy==nil then self.Accuracy=DefaultAccuracy end
+		 self.Accuracy = math.Clamp( self.Accuracy, 0, 100 )
+		local speed = DefaultLaunchVelocity
+		if( self.AmmoTypes &&  self.AmmoIndex ) then 
+			
+			speed = TANK_aMMO_SPEEDS[ self.AmmoTypes[ self.AmmoIndex ].Type ]
+			if( TANK_aMMO_RANGE[ self.AmmoTypes[self.AmmoIndex ].Type ] ) then
+			
+				R = TANK_aMMO_RANGE[ self.AmmoTypes[self.AmmoIndex ].Type ]
+
+			end			
+			
+		end
+		if( self.IPPShellVelocity ) then 
+		
+			-- R = self.MaxRange
+			speed = self.IPPShellVelocity
+		end 
+		
+		local v0 = speed
+		-- local v0 = AMMO_VELOCITY_aRTILLERY_SHELL								//Uncomment this line to test the R/c SU-8 artillery.
+	
+	
+	
+	local LaunchAngle = -self:CalculateLaunchAngle(R,v0,h, false )
+
+	if( self.TankType == TANK_TYPE_ARTILLERY ) then
+	
+		local maxpitch = self.MaxBarrelPitch or 60
+		-- local highArc = true
+		
+		if( R >= 6000 ) then 
+			
+			LaunchAngle = -self:CalculateLaunchAngle(R,v0,h, true )
+			
+		end
+		-- local TooSteep = false
+		
+		-- if( LaunchAngle < 0 ) then
+			-- if( LaunchAngle <= -maxpitch ) then
+				-- LaunchAngle = -self:CalculateLaunchAngle(R,v0,h, false )
+			-- end
+		-- end
+		-- print( -maxpitch, LaunchAngle, LaunchAngle > maxpitch  )
+		-- if( math.abs(LaunchAngle) >= math.abs(maxpitch)  ) then
+			
+			-- LaunchAngle = -self:CalculateLaunchAngle(R,v0,h, false )
+			
+		-- end	
+		
+	end
+	
+	local R =CalculateTrajectoryRange(v0,LaunchAngle,h)
+
+	if( IsValid( self.Owner ) && self.Owner:IsPlayer() ) then 
+	
+		self.Owner:SetNetworkedFloat( "LaunchVelocity", v0 )
+		self.Owner:SetNetworkedFloat( "LaunchAngle", LaunchAngle )
+		self.Owner:SetNetworkedFloat( "Range", R )
+	
+	end 
+	
+	-- self:DrawLaserTracer(self.Barrel:GetPos() + self.Barrel:GetForward() * self.BarrelLength, TargetPos )
+	-- print( LaunchAngle )
+-- print("R="..R..", Height= "..h..", v0="..v0..", Angle="..LaunchAngle.."\n")		
+
+	return LaunchAngle	
+end
+
+function Meta:CalculateLaunchAngle(R,v0,h,HighArc)
+		
+	-- if self.IsArtillery == nil then self.IsArtillery = false end
+
+	local theta,sgn,tan,discriminant
+
+	-- if h<0 then sgn =1 else sgn =1 end //Not sure if the 2nd solution of the equation works properly.
+	if ( self.TankType == TANK_TYPE_ARTILLERY && HighArc ) then 
+		
+		sgn =1 
+		
+	else 
+		
+		sgn =-1 
+		
+	end --//Not sure if the 2nd solution of the equation works properly.
+
+	discriminant = v0*v0*v0*v0-g*(g*R*R+2*h*v0*v0)
+	if discriminant < 0 then discriminant = 0 end
+	tan = (v0*v0 +sgn*math.sqrt( discriminant ) )/(g*R)
+	theta = math.deg( math.atan( tan ) )
+-- print("LaunchAngle: "..theta)
+	return math.Round(theta,2)
+
+end
+
+function CalculateTrajectoryRange(v0,theta,h)
+	
+	local cos = math.cos(math.rad(theta))
+	local sin = math.sin(math.rad(theta))
+	local sgn
+	if h>=0 then sgn =1 else sgn =-1 end
+	local NewR = v0*cos/g * (v0*sin + sgn*math.sqrt( v0*v0*sin*sin + 2*g*h) )
+
+	return NewR
+	-- return v0*v0 * math.sin( math.rad(2*theta) ) / g
+
+end
+
+function Meta:BombingImpact(v0,pitch)
+
+	local pos = self:GetPos()+Vector(0,0,-50)
+	local ang = self:GetAngles()
+
+	local trace,tr = {},{}
+	tr.start = pos
+	tr.endpos = tr.start + Vector(0,0,-150000)
+	tr.filter = { self.Pilot, self, self.Weapon, self.Wings, self.Tail }
+	tr.mask = MASK_SOLID + MASK_WATER
+	trace = util.TraceEntity( tr, self )
+	
+	local h = pos.z - trace.HitPos.z
+	local R = v0*math.abs( math.sin(math.rad(-ang.p))* math.sqrt( 2*h/g ) )
+	
+
+	local ImpactPos = pos + self:GetForward()*R + self:GetUp()*-h
+	return ImpactPos
+	
+end
+
+print( "[NeuroBase] neuro_ballistic.lua loaded!" )

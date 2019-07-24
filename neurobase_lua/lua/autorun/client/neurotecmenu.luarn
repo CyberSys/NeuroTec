@@ -1,0 +1,844 @@
+/*********************************************************************/
+/* 																	 */
+/*  					NEUROTEC SPAWNMENU							 */
+/* 																	 */
+/*********************************************************************/
+
+planemdl = {}
+	planemdl[1] = "models/hawx/planes/a-6 intruder.mdl"
+	planemdl[2] = "models/hawx/planes/a-7 corsair ii.mdl"
+	planemdl[3] = "models/hawx/planes/a-10 thunderbolt ii.mdl"
+	planemdl[4] = "models/hawx/planes/a-12 avenger ii.mdl"
+	planemdl[5] = "models/hawx/planes/av-8b harrier ii.mdl"
+	planemdl[6] = "models/hawx/planes/dassault mirage 2000 5.mdl"
+	planemdl[7] = "models/hawx/planes/dassault mirage 2000 c.mdl"
+	planemdl[8] = "models/hawx/planes/dassault mirage 2000 n.mdl"
+	planemdl[9] = "models/hawx/planes/dassault mirage 4000.mdl"
+	planemdl[10] = "models/hawx/planes/dassault mirage f1.mdl"
+	planemdl[11] = "models/hawx/planes/dassault mirage iii.mdl"
+	planemdl[12] = "models/hawx/planes/dassault mirage ivp.mdl"
+	planemdl[13] = "models/hawx/planes/dassault mirage v.mdl"
+	planemdl[14] = "models/hawx/planes/dassault rafale c.mdl"
+	planemdl[15] = "models/hawx/planes/dassault rafale m.mdl"
+	planemdl[16] = "models/hawx/planes/ea-6b prowler.mdl"
+	planemdl[17] = "models/hawx/planes/ef-111 raven.mdl"
+	planemdl[18] = "models/hawx/planes/eurofighter 2000 typhoon.mdl"
+	planemdl[19] = "models/hawx/planes/f-2.mdl"
+	planemdl[20] = "models/hawx/planes/f-4e phantom ii.mdl"
+	planemdl[21] = "models/hawx/planes/f-4g advancedwildweasel.mdl"
+	planemdl[22] = "models/hawx/planes/f-5a freedom fighter.mdl"
+	planemdl[23] = "models/hawx/planes/f-5e tiger ii.mdl"
+	planemdl[24] = "models/hawx/planes/f-14a tomcat.mdl"
+	planemdl[25] = "models/hawx/planes/f-14b bombcat.mdl"
+	planemdl[26] = "models/hawx/planes/f-14d supertomcat.mdl"
+	planemdl[27] = "models/hawx/planes/f-15 active.mdl"
+	planemdl[28] = "models/hawx/planes/f-15c eagle.mdl"
+	planemdl[29] = "models/hawx/planes/f-15e strikeeagle.mdl"
+	planemdl[30] = "models/hawx/planes/f-16a fightingfalcon.mdl"
+	planemdl[31] = "models/hawx/planes/f-16c fightingfalcon.mdl"
+	planemdl[32] = "models/hawx/planes/f-18 harv.mdl"
+	planemdl[33] = "models/hawx/planes/f-20 tigershark.mdl"
+	planemdl[34] = "models/hawx/planes/f-35 lightning ii.mdl"
+	planemdl[35] = "models/hawx/planes/f-111f aardvark.mdl"
+	planemdl[36] = "models/hawx/planes/f-117 nighthawk.mdl"
+	planemdl[37] = "models/hawx/planes/fa-18 rc.mdl"
+	planemdl[38] = "models/hawx/planes/fa-18c hornet.mdl"
+	planemdl[39] = "models/hawx/planes/fa-18e superhornet.mdl"
+	planemdl[40] = "models/hawx/planes/fa-22 raptor.mdl"
+	planemdl[41] = "models/hawx/planes/fb-22 strikeraptor.mdl"
+	planemdl[42] = "models/hawx/planes/jaguar sepecat.mdl"
+	planemdl[43] = "models/hawx/planes/mig-21 fishbed.mdl"
+	planemdl[44] = "models/hawx/planes/mig-23 flogger.mdl"
+	planemdl[45] = "models/hawx/planes/mig-25 foxbat.mdl"
+	planemdl[46] = "models/hawx/planes/mig-29 fulcrum.mdl"
+	planemdl[47] = "models/hawx/planes/mig-31 foxhound.mdl"
+	planemdl[48] = "models/hawx/planes/mig-33 superfulcrum.mdl"
+	planemdl[49] = "models/hawx/planes/mig-mfi.mdl"
+	planemdl[50] = "models/hawx/planes/rf-15 peakeagle.mdl"
+	planemdl[51] = "models/hawx/planes/saab-35 draken.mdl"
+	planemdl[52] = "models/hawx/planes/saab-37 viggen.mdl"
+	planemdl[53] = "models/hawx/planes/saab-39 gripen.mdl"
+	planemdl[54] = "models/hawx/planes/sr-71 blackbird.mdl"
+	planemdl[55] = "models/hawx/planes/su-25 frogfoot.mdl"
+	planemdl[56] = "models/hawx/planes/su-27 flanker.mdl"
+	planemdl[57] = "models/hawx/planes/su-32 fn.mdl"
+	planemdl[58] = "models/hawx/planes/su-34 fullback.mdl"
+	planemdl[59] = "models/hawx/planes/su-35 superflanker.mdl"
+	planemdl[60] = "models/hawx/planes/su-37 terminator.mdl"
+	planemdl[61] = "models/hawx/planes/su-39 frogfoot.mdl"
+	planemdl[62] = "models/hawx/planes/su-47 berkut.mdl"
+	planemdl[63] = "models/hawx/planes/x-29a.mdl"
+	planemdl[64] = "models/hawx/planes/xa-20 razorback strike fighter.mdl"
+	planemdl[65] = "models/hawx/planes/yf-12a.mdl"
+	planemdl[66] = "models/hawx/planes/yf-17 cobra.mdl"
+	planemdl[67] = "models/hawx/planes/yf-23 blackwidow ii.mdl"
+	planemdl[68] = "models/hawx/planes/adf-01 falken.mdl"
+	planemdl[69] = "models/hawx/planes/b-52h stratofortress.mdl"
+	planemdl[70] = "models/hawx/planes/e-767 awacs.mdl"
+	planemdl[71] = "models/hawx/planes/edi stealth.mdl"
+	planemdl[72] = "models/hawx/planes/x-02 wyvern.mdl"
+
+plane = {}
+	plane[1] = "sent_a-6_p"
+	plane[2] = "sent_a-7_p"
+	plane[3] = "sent_a-10_p"
+	plane[4] = "sent_a-12_p"
+	plane[5] = "sent_harrier_p"
+	plane[6] = "sent_mir20005_p"
+	plane[7] = "sent_mir2000C_p"
+	plane[8] = "sent_mir2000n_p"
+	plane[9] = "sent_mir4000_p"
+	plane[10] = "sent_mirf1_p"
+	plane[11] = "sent_miriii_p"
+	plane[12] = "sent_mirivp_p"
+	plane[13] = "sent_mirv_p"
+	plane[14] = "sent_rafalec_p"
+	plane[15] = "sent_rafalem_p"
+	plane[16] = "sent_ea-6b_p"
+	plane[17] = "sent_ef-111_p"
+	plane[18] = "sent_euro2000_p"
+	plane[19] = "sent_f-2_p"
+	plane[20] = "sent_sent_f-4e_p"
+	plane[21] = "sent_f-4g_p"
+	plane[22] = "sent_f-5a_p"
+	plane[23] = "sent_f-5e_p"
+	plane[24] = "sent_f-14a_p"
+	plane[25] = "sent_f-14b_p"
+	plane[26] = "sent_f-14d_p"
+	plane[27] = "sent_f-15active_p"
+	plane[28] = "sent_f-15c_p"
+	plane[29] = "sent_f-15e_p"
+	plane[30] = "sent_f-16a_p"
+	plane[31] = "sent_f-16c_p"
+	plane[32] = "sent_f-18harv_p"
+	plane[33] = "sent_f-20_p"
+	plane[34] = "sent_f-35lightning_p"
+	plane[35] = "sent_f-111f_p"
+	plane[36] = "sent_f117_p"
+	plane[37] = "sent_fa-18rc_p"
+	plane[38] = "sent_fa-18c_p"
+	plane[39] = "sent_fa-18e_p"
+	plane[40] = "sent_fa-22raptor_p"
+	plane[41] = "sent_fb-22_p"
+	plane[42] = "sent_jaguar_p"
+	plane[43] = "sent_mig-21_p"
+	plane[44] = "sent_mig-23_p"
+	plane[45] = "sent_mig-25_p"
+	plane[46] = "sent_mig-29_p"
+	plane[47] = "sent_mig-31_p"
+	plane[48] = "sent_mig-33_p"
+	plane[49] = "sent_mig-mfi_p"
+	plane[50] = "sent_rf-15_p"
+	plane[51] = "sent_saab-35_p"
+	plane[52] = "sent_saab-37_p"
+	plane[53] = "sent_jas39gripen_p"
+	plane[54] = "sent_sr-71_p"
+	plane[55] = "sent_su-25_p"
+	plane[56] = "sent_su-27_p"
+	plane[57] = "sent_su-32_p"
+	plane[58] = "sent_su-34_p"
+	plane[59] = "sent_su-35_p"
+	plane[60] = "sent_su-37_p"
+	plane[61] = "sent_su-39_p"
+	plane[62] = "sent_su-47_p"
+	plane[63] = "sent_x-29a_p"
+	plane[64] = "sent_xa-20_p"
+	plane[65] = "sent_yf-12a_p"
+	plane[66] = "sent_yf-17_p"
+	plane[67] = "sent_yf-23_p"
+	plane[68] = "sent_adf01falken_p"
+	plane[69] = "sent_b-52h_p"
+	plane[70] = "sent_e-767_p"
+	plane[71] = "sent_edi_p"
+	plane[72] = "sent_x02wyvern_p"
+	plane[73] = "sent_f-14b_p"
+
+heli = {}
+	heli[1] = "sent_ah-1cobra_p"
+	heli[2] = "sent_ah-2rooivalk_p"
+	heli[3] = "rah-66comanche_p"
+	heli[3] = "sent_uh-60blackhawk_p"
+	heli[4] = "sent_mh-53jpavelow_p"
+	heli[5] = "sent_wz-10_p"
+	heli[6] = "sent_ka-50blackshark_p"
+	heli[8] = "sent_mi-24_p"
+	heli[9] = "sent_mi-28_p"
+	heli[10] = "sent_uh-1_p"
+	
+tank = {}
+	tank[1] = "sent_t-80u_p"
+	tank[2] = "sent_zsu-23-4_p"
+	tank[3] = "sent_2s7pion_p"
+	tank[4] = "sent_110sf2lars_p"
+	tank[5] = "sent_salvationtank"
+	tank[6] = "sent_t1"
+
+boat = {}
+	boat[1] = "sent_rattack_p"
+	boat[2] = "sent_uboat_p"
+	boat[3] = "sent_yatch"
+	
+missile = {}
+	missile[1] = "AGM-65 Maverick"
+	missile[2] = "AGM-84 Harpoon"
+	missile[3] = "AGM-88 HARM"
+	missile[4] = "AGM-130A"
+	missile[5] = "AGM-131A SRAM-II"
+	missile[6] = "AGM-142"
+	missile[7] = "AIM-07 Sparrow"
+	missile[8] = "AIM-9 Sidewinder"
+	missile[9] = "AIM-120 AMRAAM"
+	missile[10] = "AIM-132 ASRAAM"
+	missile[11] = "Exocet AM39"
+	missile[12] = "Python-5"
+	
+bomb = {}
+	bomb[1] = "CBU-94 BlackoutBomb"
+	bomb[2] = "CBU-100 ClusterBomb"
+	bomb[3] = "GBU-12 Paveway-II"
+	bomb[4] = "GBU-32 JDAM"
+	bomb[5] = "MK-82"
+
+pod = {}
+	pod[1] = "ALQ 131 ECM"
+	pod[2] = "AN AAQ 14 LANTIRN"
+	pod[3] = "AN ALQ 184"
+	pod[4] = "Sniper XR-ATP"
+	pod[5] = "Zuni MK16"
+
+other = {}
+	other[1] = "BGM-109 Tomahawk"
+	other[2] = "Drop Tank"
+	other[3] = "LAU-131 A"
+
+weaponmdl = {}
+	weaponmdl[1] = "models/hawx/weapons/agm-65 maverick.mdl"
+	weaponmdl[2] = "models/hawx/weapons/agm-84 harpoon.mdl"
+	weaponmdl[3] = "models/hawx/weapons/agm-88 harm.mdl"
+	weaponmdl[4] = "models/hawx/weapons/agm-130a.mdl"
+	weaponmdl[5] = "models/hawx/weapons/agm-131a sram-ii.mdl"
+	weaponmdl[6] = "models/hawx/weapons/agm-142.mdl"
+	weaponmdl[7] = "models/hawx/weapons/aim-07 sparrow.mdl"
+	weaponmdl[8] = "models/hawx/weapons/aim-9 sidewinder.mdl"
+	weaponmdl[9] = "models/hawx/weapons/aim-120 amraam.mdl"
+	weaponmdl[10] = "models/hawx/weapons/aim-132 asraam.mdl"
+	weaponmdl[11] = "models/hawx/weapons/exocet am39.mdl"
+	weaponmdl[12] = "models/hawx/weapons/python-5.mdl"
+	weaponmdl[13] = "models/hawx/weapons/cbu-94 blackoutbomb.mdl"
+	weaponmdl[14] = "models/hawx/weapons/cbu-100 clusterbomb.mdl"
+	weaponmdl[15] = "models/hawx/weapons/gbu-12 paveway-ii.mdl"
+	weaponmdl[16] = "models/hawx/weapons/gbu-32 jdam.mdl"
+	weaponmdl[17] = "models/hawx/weapons/mk-82.mdl"
+	weaponmdl[18] = "models/hawx/weapons/alq 131 ecm.mdl"
+	weaponmdl[19] = "models/hawx/weapons/an aaq 14 lantirn.mdl"
+	weaponmdl[20] = "models/hawx/weapons/an alq 184.mdl"
+	weaponmdl[21] = "models/hawx/weapons/sniper xr-atp.mdl"
+	weaponmdl[22] = "models/hawx/weapons/zuni mk16.mdl"
+	weaponmdl[23] = "models/hawx/weapons/bgm-109 tomahawk.mdl"
+	weaponmdl[24] = "models/hawx/weapons/drop tank.mdl"
+	weaponmdl[25] = "models/hawx/weapons/lau-131 a.mdl"
+
+//	planeent=plane[planenumber]
+local countplane = table.Count( planemdl )
+local numberofplanes = table.getn( planemdl )
+local skinnumber = 0
+local planeent = plane[planenumber]
+//local ply = LocalPlayer
+local ObjectEnt = CreateClientConVar( "ObjectENT", "sent_yf-23_p", false, false )
+
+function WorldViewMDL(pl)
+
+local objMDL = pl:GetNetworkedString( "objectMDL" )
+
+	//Show a ghost of the entity at spawnpoint coords.
+	for k,v in pairs( ents.GetAll() ) do
+
+	local c = v:GetClass()
+	local PointExist = ( string.find( c, "sent_spawnpoint" ) != nil )
+			
+			if PointExist then
+			ViewPoint = v:GetPos()
+			pl:SetNetworkedVector( "SpawnPoint", ViewPoint )
+					if Preview then
+						Preview:Remove()
+					end
+--						Preview:SetModel( pl:GetNetworkedString( "objectMDL", planemdl[1] ) )			
+--						Preview:SetSkin( pl:GetNetworkedString( "Skin", 0 ) )			
+--					else
+						local Preview=ents.Create( "prop_physics" )
+					//	Preview:SetModel( pl:GetNetworkedString( "objectMDL" ) )			
+						Preview:SetModel( objMDL )			
+						Preview:SetPos( ViewPoint + Vector( 0, 0, 5 ) )
+						Preview:SetSkin( pl:GetNetworkedString( "Skin", 0 ) )			
+						Preview:SetColor( Color(255,255,255, 200) )
+						Preview:Spawn()
+						Preview:SetParent( ent )
+						pl:SetNetworkedEntity("objectVW", Preview)
+--					end
+
+			end
+	end		
+
+end
+
+function PlaneMenu(ply,tr)
+
+local PlanePanel = vgui.Create( "DFrame" )
+PlanePanel:SetPos( 0,0 )
+PlanePanel:SetSize( ScrW()*0.2, ScrH()*0.45 )
+PlanePanel:SetTitle( "Select plane" )
+PlanePanel:SetVisible( true )
+PlanePanel:SetDraggable( false )
+PlanePanel:ShowCloseButton( true )
+PlanePanel:MakePopup()
+
+local PlaneView = vgui.Create( "DFrame" )
+PlaneView:SetParent(PlanePanel)
+PlaneView:SetPos( ScrW()*0.2,0 )
+PlaneView:SetSize( ScrH()*0.4, 23 )
+PlaneView:SetTitle( "Plane View" )
+PlaneView:SetVisible( true )
+PlaneView:SetDraggable( false )
+PlaneView:ShowCloseButton( false )
+PlaneView:MakePopup()
+
+local CloseButton = vgui.Create( "DButton")
+CloseButton:SetParent( PlaneView )
+CloseButton:SetText( "Close" )
+CloseButton:SetPos( 50-5, 23 )
+CloseButton:SetSize( 50, 25 )
+CloseButton.DoClick = function ()
+	PlanePanel:Close()
+	PlaneView:Close()
+	PView:Close()
+	end
+
+-- Views
+
+local PView = vgui.Create( "DModelPanel", DermaPanel )
+PView:SetParent(PlaneView)
+PView:SetModel( planemdl[1] )
+PView:SetPos( 0, 0 )
+PView:SetSize( ScrH()*0.4, ScrH()*0.4 )
+PView:SetCamPos( Vector( 512, 512, 512 ) )
+PView:SetLookAt( Vector( 0, 0, 0 ) )
+
+-- Plane Panel Sheet
+
+local PropertySheet = vgui.Create( "DPropertySheet",PlaneSheet )
+PropertySheet:SetParent( PlanePanel )
+PropertySheet:SetPos( 5, 30 )
+PropertySheet:SetSize( ScrW()*0.2-10, ScrH()*0.4-10 )
+
+local planenumber = table.getn(planemdl)-table.getn(planemdl)
+
+/*
+	for k,v in pairs( ents.GetAll() ) do
+
+	local c = v:GetClass()
+	local PointExist = ( string.find( c, "sent_spawnpoint" ) != nil )
+			
+			if PointExist then
+			ViewPoint = v:GetPos()
+			WorldViewMDL( ply )
+			end
+	end
+	*/
+
+local SheetOnePanel = vgui.Create( "DPanel", PropertySheet )
+SheetOnePanel:SetPos( 25, 50 )
+SheetOnePanel:SetSize( 250, 250 )
+SheetOnePanel.Paint = function() -- Paint function
+    surface.SetDrawColor( 50, 50, 50, 255 ) -- Set our rect color below us; we do this so you can see items added to this panel
+    surface.DrawRect( 0, 0, SheetOnePanel:GetWide(), SheetOnePanel:GetTall() ) -- Draw the rect
+end
+
+local MenuButton = vgui.Create("DButton",SheetOnePanel)
+MenuButton:SetText( "Plane List" )
+MenuButton:SetPos(5, 5)
+MenuButton:SetSize( 75, 25 )
+MenuButton.DoClick = function ( btn )
+    local MenuButtonOptions = DermaMenu()
+    MenuButtonOptions:AddOption("A-6 Intruder", function() 
+	planenumber=1
+	PView:SetModel( planemdl[1] )
+	ply:SetNetworkedString( "objectMDL", planemdl[1] )
+	end )
+    MenuButtonOptions:AddOption("A-7", function() 
+	planenumber=2
+	PView:SetModel( planemdl[2] )
+	ply:SetNetworkedString( "objectMDL", planemdl[2] )
+	end )
+    MenuButtonOptions:AddOption("A-10 Thunderbolt II", function() 
+	planenumber=3
+	PView:SetModel( planemdl[3] )
+	ply:SetNetworkedString( "objectMDL", planemdl[3] )
+	end )
+    MenuButtonOptions:AddOption("A-12 Avenger II", function() 
+	planenumber=4
+	PView:SetModel( planemdl[4] )
+	end )
+    MenuButtonOptions:AddOption("AV-8B Harrier II", function() 
+	planenumber=5
+	PView:SetModel( planemdl[5] )
+	end )
+    MenuButtonOptions:AddOption("Dassault Mirage 2000 5", function() 
+	planenumber=6
+	PView:SetModel( planemdl[6] )
+	end )
+    MenuButtonOptions:AddOption("Dassault Mirage 2000 C", function() 
+	planenumber=7
+	PView:SetModel( planemdl[7] )
+	end )
+    MenuButtonOptions:AddOption("Dassault Mirage 2000 N", function() 
+	planenumber=8
+	PView:SetModel( planemdl[8] )
+	end )
+    MenuButtonOptions:AddOption("Dassault Mirage 4000", function() 
+	planenumber=9
+	PView:SetModel( planemdl[9] )
+	end )
+    MenuButtonOptions:AddOption("Dassault Mirage F1", function() 
+	planenumber=10
+	PView:SetModel( planemdl[10] )
+	end )
+    MenuButtonOptions:AddOption("Dassault Mirage  III", function() 
+	planenumber=11
+	PView:SetModel( planemdl[11] )
+	end )
+    MenuButtonOptions:AddOption("Dassault Mirage IVP", function() 
+	planenumber=12
+	PView:SetModel( planemdl[12] )
+	end )
+    MenuButtonOptions:AddOption("Dassault Mirage V", function() 
+	planenumber=13
+	PView:SetModel( planemdl[13] )
+	end )
+    MenuButtonOptions:AddOption("Dassault Rafale C", function() 
+	planenumber=14
+	PView:SetModel( planemdl[14] )
+	end )
+    MenuButtonOptions:AddOption("Dassault Rafale M", function() 
+	planenumber=15
+	PView:SetModel( planemdl[15] )
+	end )
+    MenuButtonOptions:AddOption("EA-6B Prowler", function() 
+	planenumber=16
+	PView:SetModel( planemdl[16] )
+	end )
+    MenuButtonOptions:AddOption("EF-111 Raven", function() 
+	planenumber=17
+	PView:SetModel( planemdl[17] )
+	end )
+    MenuButtonOptions:AddOption("Eurofighter 2000 Typhoon", function() 
+	planenumber=18
+	PView:SetModel( planemdl[18] )
+	end )
+    MenuButtonOptions:AddOption("F-2", function() 
+	planenumber=19
+	PView:SetModel( planemdl[19] )
+	end )
+    MenuButtonOptions:AddOption("F-4E Phantom II", function() 
+	planenumber=20
+	PView:SetModel( planemdl[20] )
+	end )
+    MenuButtonOptions:AddOption("F-4G AdvancedWildWeasel", function() 
+	planenumber=21
+	PView:SetModel( planemdl[21] )
+	end )
+    MenuButtonOptions:AddOption("F-5A Freedom Fighter", function() 
+	planenumber=22
+	PView:SetModel( planemdl[22] )
+	end )
+    MenuButtonOptions:AddOption("F-5E Tiger II", function() 
+	planenumber=23
+	PView:SetModel( planemdl[23] )
+	end )
+    MenuButtonOptions:AddOption("F-14A Tomcat", function() 
+	planenumber=24
+	PView:SetModel( planemdl[24] )
+	end )
+    MenuButtonOptions:AddOption("F-14B Bombcat", function() 
+	planenumber=25
+	PView:SetModel( planemdl[25] )
+	end )
+    MenuButtonOptions:AddOption("F-14D SuperTomcat", function() 
+	planenumber=26
+	PView:SetModel( planemdl[26] )
+	end )
+    MenuButtonOptions:AddOption("F-15 Active", function() 
+	planenumber=27
+	PView:SetModel( planemdl[27] )
+	end )
+    MenuButtonOptions:AddOption("F-15C Eagle", function() 
+	planenumber=28
+	PView:SetModel( planemdl[28] )
+	end )
+    MenuButtonOptions:AddOption("F-15E StrikeEagle", function() 
+	planenumber=29
+	PView:SetModel( planemdl[29] )
+	end )
+    MenuButtonOptions:AddOption("F-16A FightingFalcon", function() 
+	planenumber=30
+	PView:SetModel( planemdl[30] )
+	end )
+    MenuButtonOptions:AddOption("F-16C FightingFalcon", function() 
+	planenumber=31
+	PView:SetModel( planemdl[31] )
+	end )
+    MenuButtonOptions:AddOption("F-18 HARV", function() 
+	planenumber=32
+	PView:SetModel( planemdl[32] )
+	end )
+    MenuButtonOptions:AddOption("F-20 Tigershark", function() 
+	planenumber=33
+	PView:SetModel( planemdl[33] )
+	end )
+    MenuButtonOptions:AddOption("F-35 Lightning II", function() 
+	planenumber=34
+	PView:SetModel( planemdl[34] )
+	end )
+    MenuButtonOptions:AddOption("F-111F Aardvark", function() 
+	planenumber=35
+	PView:SetModel( planemdl[35] )
+	end )
+    MenuButtonOptions:AddOption("F-117 Nighthawk", function() 
+	planenumber=36
+	PView:SetModel( planemdl[36] )
+	end )
+    MenuButtonOptions:AddOption("FA-18 RC", function() 
+	planenumber=37
+	PView:SetModel( planemdl[37] )
+	end )
+    MenuButtonOptions:AddOption("FA-18C Hornet", function() 
+	planenumber=38
+	PView:SetModel( planemdl[38] )
+	end )
+    MenuButtonOptions:AddOption("FA-18E SuperHornet", function() 
+	planenumber=39
+	PView:SetModel( planemdl[39] )
+	end )
+    MenuButtonOptions:AddOption("FA-22 Raptor", function() 
+	planenumber=40
+	PView:SetModel( planemdl[40] )
+	end )
+    MenuButtonOptions:AddOption("FB-22 StrikeRaptor", function() 
+	planenumber=41
+	PView:SetModel( planemdl[41] )
+	end )
+    MenuButtonOptions:AddOption("Jaguar SEPECAT", function() 
+	planenumber=42
+	PView:SetModel( planemdl[42] )
+	end )
+    MenuButtonOptions:AddOption("Mig-21 Fishbed", function() 
+	planenumber=43
+	PView:SetModel( planemdl[43] )
+	end )
+    MenuButtonOptions:AddOption("Mig-23 Flogger", function() 
+	planenumber=44
+	PView:SetModel( planemdl[44] )
+	end )
+    MenuButtonOptions:AddOption("Mig-25 Foxbat", function() 
+	planenumber=45
+	PView:SetModel( planemdl[45] )
+	end )
+    MenuButtonOptions:AddOption("Mig-29 Fulcrum", function() 
+	planenumber=46
+	PView:SetModel( planemdl[46] )
+	end )
+    MenuButtonOptions:AddOption("Mig-31 Foxhound", function() 
+	planenumber=47
+	PView:SetModel( planemdl[47] )
+	end )
+    MenuButtonOptions:AddOption("Mig-33 SuperFulcrum", function() 
+	planenumber=48
+	PView:SetModel( planemdl[48] )
+	end )
+    MenuButtonOptions:AddOption("Mig-MFI", function() 
+	planenumber=49
+	PView:SetModel( planemdl[49] )
+	end )
+    MenuButtonOptions:AddOption("RF-15 PeakEagle", function() 
+	planenumber=50
+	PView:SetModel( planemdl[50] )
+	end )
+    MenuButtonOptions:AddOption("Saab-35 Draken", function() 
+	planenumber=51
+	PView:SetModel( planemdl[51] )
+	end )
+    MenuButtonOptions:AddOption("Saab-37 Viggen", function() 
+	planenumber=52
+	PView:SetModel( planemdl[52] )
+	end )
+    MenuButtonOptions:AddOption("Saab-39 Gripen", function() 
+	planenumber=53
+	PView:SetModel( planemdl[53] )
+	end )
+    MenuButtonOptions:AddOption("SR-71 Blackbird", function() 
+	planenumber=54
+	PView:SetModel( planemdl[54] )
+	end )
+    MenuButtonOptions:AddOption("Su-25 Frogfoot", function() 
+	planenumber=55
+	PView:SetModel( planemdl[55] )
+	end )
+    MenuButtonOptions:AddOption("Su-27 Flanker", function() 
+	planenumber=56
+	PView:SetModel( planemdl[56] )
+	end )
+    MenuButtonOptions:AddOption("Su-32 FN", function() 
+	planenumber=57
+	PView:SetModel( planemdl[57] )
+	end )
+    MenuButtonOptions:AddOption("Su-34 Fullback", function() 
+	planenumber=58
+	PView:SetModel( planemdl[58] )
+	end )
+    MenuButtonOptions:AddOption("Su-35 SuperFlanker", function() 
+	planenumber=59
+	PView:SetModel( planemdl[59] )
+	end )
+    MenuButtonOptions:AddOption("Su-37 Terminator", function() 
+	planenumber=60
+	PView:SetModel( planemdl[60] )
+	end )
+    MenuButtonOptions:AddOption("Su-39 Frogfoot", function() 
+	planenumber=61
+	PView:SetModel( planemdl[61] )
+	end )
+    MenuButtonOptions:AddOption("Su-47 Berkut", function() 
+	planenumber=62
+	PView:SetModel( planemdl[62] )
+	end )
+    MenuButtonOptions:AddOption("X-29A", function() 
+	planenumber=63
+	PView:SetModel( planemdl[63] )
+	end )
+    MenuButtonOptions:AddOption("XA-20 Razorback Strike Fighter", function() 
+	planenumber=64
+	PView:SetModel( planemdl[64] )
+	end )
+    MenuButtonOptions:AddOption("YF-12A", function() 
+	planenumber=65
+	PView:SetModel( planemdl[65] )
+	end )
+    MenuButtonOptions:AddOption("YF-17 Cobra", function() 
+	planenumber=66
+	PView:SetModel( planemdl[66] )
+	end )
+    MenuButtonOptions:AddOption("YF-23 BlackWidow II", function() 
+	planenumber=67
+	PView:SetModel( planemdl[67] )
+	end )
+    MenuButtonOptions:AddOption("ADF-01 Falken", function() 
+	planenumber=68
+	PView:SetModel( planemdl[68] )
+	end )
+    MenuButtonOptions:AddOption("B-52H Stratofortress", function() 
+	planenumber=69
+	PView:SetModel( planemdl[69] )
+	end )
+    MenuButtonOptions:AddOption("E-767 AWACS", function() 
+	planenumber=70
+	PView:SetModel( planemdl[70] )
+	end )
+    MenuButtonOptions:AddOption("EDI Stealth", function() 
+	planenumber=71
+	PView:SetModel( planemdl[71] )
+	end )
+    MenuButtonOptions:AddOption("X-02 Wyvern", function() 
+	planenumber=72
+	PView:SetModel( planemdl[72] )
+	end )
+MenuButtonOptions:Open()
+-- print(planenumber)
+ply:SetNetworkedString( "objectMDL", planemdl[planenumber] )
+ply:SetNetworkedString( "objectENT", plane[planenumber] )
+RunConsoleCommand( "ObjectENT", plane[planenumber] )
+end
+
+local SheetTwoPanel = vgui.Create( "DPanel", PropertySheet )
+SheetTwoPanel:SetPos( 25, 50 )
+SheetTwoPanel:SetSize( 250, 250 )
+SheetTwoPanel.Paint = function() -- Paint function
+    surface.SetDrawColor( 50, 50, 50, 255 ) -- Set our rect color below us; we do this so you can see items added to this panel
+    surface.DrawRect( 0, 0, SheetTwoPanel:GetWide(), SheetTwoPanel:GetTall() ) -- Draw the rect
+end
+local SkinSlider = vgui.Create( "DNumSlider", SheetOnePanel )
+SkinSlider:SetPos( 5,35 )
+SkinSlider:SetSize( 150, 100 )
+SkinSlider:SetText( "Aircraft Scheme" )
+SkinSlider:SetMin( 0 )
+SkinSlider:SetMax( 15 )
+SkinSlider:SetDecimals( 0 )
+SkinSlider.ValueChanged = function(pSelf, fValue)
+ply:SetNetworkedInt( "Skin", SkinSlider:GetValue() )
+PView:SetSkin( ply:GetNetworkedInt( "Skin", 0 ) )
+			
+end
+ 
+local SheetThreePanel = vgui.Create( "DPanel", PropertySheet )
+SheetThreePanel:SetPos( 25, 50 )
+SheetThreePanel:SetSize( 250, 250 )
+SheetThreePanel.Paint = function() -- Paint function
+    surface.SetDrawColor( 50, 50, 50, 255 ) -- Set our rect color below us; we do this so you can see items added to this panel
+    surface.DrawRect( 0, 0, SheetThreePanel:GetWide(), SheetThreePanel:GetTall() ) -- Draw the rect
+end
+
+local SheetItemOne = vgui.Create( "DButton", SheetOnePanel )
+SheetItemOne:SetText( "Preview" )
+SheetItemOne:SetPos( 5,100 )
+SheetItemOne:SetSize( 75, 25 )
+ SheetItemOne.DoClick = function ()
+	WorldViewMDL(ply)
+end
+SheetItemOne.DoRightClick = function ()
+	WorldViewMDL(ply)
+end
+local SheetItemFour = vgui.Create( "DButton",SheetOnePanel )
+SheetItemFour:SetText( "SPAWN" )
+SheetItemFour:SetPos( 5,150 )
+SheetItemFour:SetSize( 175, 25 )
+ SheetItemFour.DoClick = function ()
+	ply:SetNetworkedString( "objectENT", plane[planenumber] )
+	RunConsoleCommand( "ObjectENT", plane[planenumber] )
+	RunConsoleCommand( "Neuro_SpawnObject" )
+end
+
+--Sheet Two //Tanks
+local TankButton = vgui.Create("DButton",SheetTwoPanel)
+TankButton:SetText( "Tank List" )
+TankButton:SetPos(5, 5)
+TankButton:SetSize( 75, 25 )
+TankButton.DoClick = function ( btn )
+    local TankButtonOptions = DermaMenu()
+    TankButtonOptions:AddOption("T-80U", function() 
+	PView:SetModel( "models/wic/ground/t-80u/t-80u_body.mdl" )
+	ply:SetNetworkedString( "objectMDL", "models/wic/ground/t-80u/t-80u_body.mdl" )
+	end )
+    TankButtonOptions:AddOption("ZSU-23-4", function() 
+	PView:SetModel( "models/wic/ground/zsu-23-4/zsu-23-4_body.mdl" )
+	ply:SetNetworkedString( "objectMDL", "models/wic/ground/zsu-23-4/zsu-23-4_body.mdl" )
+	end )
+    TankButtonOptions:AddOption("2s7 pion", function() 
+	PView:SetModel( "models/wic/ground/2s7 pion/2s7 pion_body.mdl" )
+	ply:SetNetworkedString( "objectMDL", "models/wic/ground/2s7 pion/2s7 pion_body.mdl" )
+	end )
+    TankButtonOptions:AddOption("110SF2 Lars", function() 
+	PView:SetModel( "models/wic/ground/110sf2/110sf2_body.mdl" )
+	ply:SetNetworkedString( "objectMDL", "models/wic/ground/110sf2/110sf2_body.mdl" )
+	end )
+    TankButtonOptions:AddOption("Salvation Tank", function() 
+	PView:SetModel( "models/inaki/props_vehicles/terminator_salvation_hktank_mainx2.mdl" )
+	ply:SetNetworkedString( "objectMDL", "models/inaki/props_vehicles/terminator_salvation_hktank_mainx2.mdl" )
+	end )
+    TankButtonOptions:AddOption("T-1", function() 
+	PView:SetModel( "models/t3/t1/t1.mdl" )
+	ply:SetNetworkedString( "objectMDL", "models/t3/t1/t1.mdl" )
+	end )
+TankButtonOptions:Open()
+end
+
+local TankItem = vgui.Create( "DButton",SheetTwoPanel )
+TankItem:SetText( "SPAWN" )
+TankItem:SetPos( 5,150 )
+TankItem:SetSize( 175, 25 )
+ TankItem.DoClick = function ()
+	ply:SetNetworkedString( "objectENT", tank[planenumber] )
+	RunConsoleCommand( "ObjectENT", tank[planenumber] )
+	RunConsoleCommand( "Neuro_SpawnObject" )
+end
+
+local SkinSlider = vgui.Create( "DNumSlider", SheetTwoPanel )
+SkinSlider:SetPos( 5,35 )
+SkinSlider:SetSize( 150, 100 )
+SkinSlider:SetText( "Tank Scheme" )
+SkinSlider:SetMin( 0 )
+SkinSlider:SetMax( 2 )
+SkinSlider:SetDecimals( 0 )
+SkinSlider.ValueChanged = function(pSelf, fValue)
+ply:SetNetworkedInt( "Skin", SkinSlider:GetValue() )
+PView:SetSkin( ply:GetNetworkedInt( "Skin", 0 ) )		
+end
+ 
+--Sheet Three //Boats
+local BoatButton = vgui.Create("DButton",SheetThreePanel)
+BoatButton:SetText( "Boat List" )
+BoatButton:SetPos(5, 5)
+BoatButton:SetSize( 75, 25 )
+BoatButton.DoClick = function ( btn )
+    local BoatButtonOptions = DermaMenu()
+    BoatButtonOptions:AddOption("Rattack", function() 
+	PView:SetModel( "models/military2/ship/sp_rattack.mdl" )
+	ply:SetNetworkedString( "objectMDL", "models/military2/ship/sp_rattack.mdl" )
+	end )
+    BoatButtonOptions:AddOption("U-Boat", function() 
+	PView:SetModel( "models/props_uboat/jed_ixb_hull.mdl" )
+	ply:SetNetworkedString( "objectMDL", "models/props_uboat/jed_ixb_hull.mdl" )
+	end )
+    BoatButtonOptions:AddOption("Lara's Yatch", function() 
+	PView:SetModel( "models/LarasBoat/larasboat.mdl" )
+	ply:SetNetworkedString( "objectMDL", "models/LarasBoat/larasboat.mdl" )
+	end )
+BoatButtonOptions:Open()
+end
+local BoatItem = vgui.Create( "DButton",SheetThreePanel )
+BoatItem:SetText( "SPAWN" )
+BoatItem:SetPos( 5,150 )
+BoatItem:SetSize( 175, 25 )
+ BoatItem.DoClick = function ()
+	ply:SetNetworkedString( "objectENT", boat[planenumber] )
+	RunConsoleCommand( "ObjectENT", boat[planenumber] )
+	RunConsoleCommand( "Neuro_SpawnObject" )
+end
+
+--Sheet Four //Weapons
+local SheetFourPanel = vgui.Create( "DPanel", PropertySheet )
+SheetFourPanel:SetPos( 25, 50 )
+SheetFourPanel:SetSize( 250, 250 )
+SheetFourPanel.Paint = function() -- Paint function
+    surface.SetDrawColor( 50, 50, 50, 255 ) -- Set our rect color below us; we do this so you can see items added to this panel
+    surface.DrawRect( 0, 0, SheetFourPanel:GetWide(), SheetFourPanel:GetTall() ) -- Draw the rect
+end
+
+local WeapButton = vgui.Create("DButton",SheetFourPanel)
+WeapButton:SetText( "Weapons List" )
+WeapButton:SetPos(5, 5)
+WeapButton:SetSize( 75, 25 )
+WeapButton.DoClick = function ( btn )
+    local WeapButtonOptions = DermaMenu()
+    WeapButtonOptions:AddOption("Claymore", function() 
+	PView:SetModel( "models/claymore.mdl" )
+	ply:SetNetworkedString( "objectMDL", "models/claymore.mdl" )
+	end )
+    WeapButtonOptions:AddOption("Landmine", function() 
+	PView:SetModel( "models/landmine.mdl" )
+	ply:SetNetworkedString( "objectMDL", "models/landmine.mdl" )
+	end )
+    WeapButtonOptions:AddOption("V1 bomb", function() 
+	PView:SetModel( "models/ukulele/props_v1_flying_bomb/v1_flying_bomb.mdl" )
+	ply:SetNetworkedString( "objectMDL", "models/ukulele/props_v1_flying_bomb/v1_flying_bomb.mdl" )
+	end )
+WeapButtonOptions:Open()
+end
+
+local WeapButton = vgui.Create( "DButton",SheetFourPanel )
+WeapButton:SetText( "SPAWN" )
+WeapButton:SetPos( 5,150 )
+WeapButton:SetSize( 175, 25 )
+ WeapButton.DoClick = function ()
+	ply:SetNetworkedString( "objectENT", weapon[planenumber] )
+	RunConsoleCommand( "ObjectENT", weapon[planenumber] )
+	RunConsoleCommand( "Neuro_SpawnObject" )
+end
+
+PropertySheet:AddSheet( "Air", SheetOnePanel, "gui/silkicons/car", false, false, "Select plane" )
+PropertySheet:AddSheet( "Ground", SheetTwoPanel, "gui/silkicons/car", false, false, "Select ground unit" ) 
+PropertySheet:AddSheet( "Sea", SheetThreePanel, "gui/silkicons/car", false, false, "Select ship" )
+PropertySheet:AddSheet( "Weapons", SheetFourPanel, "gui/silkicons/bomb", false, false, "Select weapon" )
+
+end	
+
+concommand.Add("Neuro_SpawnMenu", PlaneMenu)
+
+print( "[NeuroBase] NeuroTecMenu.lua loaded!" )
