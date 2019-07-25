@@ -90,7 +90,7 @@ ENT.CamPos3rd = Vector( 700, 0, 100 )
 
 -- Primary Weapon Stuff
 ENT.NA_TracerName = "AirboatGunTracer" 
-ENT.NA_PrimaryAttackSound = "A10fart_2.mp3"
+ENT.NA_PrimaryAttackSound = "a10fart_2.mp3"
 ENT.NA_PrimaryAttackEffect = "AA_muzzleflash"
 ENT.NA_DefaultMaingunImpactFX = "30cal_impact"
 

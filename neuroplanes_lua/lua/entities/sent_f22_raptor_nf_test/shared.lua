@@ -1,5 +1,5 @@
 ENT.Type 						= "vehicle"
-ENT.EntityType 					= "sent_f22_Raptor_NF_test"
+ENT.EntityType 					= "sent_f22_raptor_nf_test"
 ENT.Base 						= "base_anim"
 ENT.PrintName					= "F-22 Raptor DEMO"
 ENT.Author						= "Hoffa"

@@ -1,5 +1,5 @@
 ENT.Type 						= "vehicle"
-ENT.EntityType 					= "sent_a-10_p_new_Framework_test"
+ENT.EntityType 					= "sent_a-10_p_new_framework_test"
 ENT.Base 						= "base_anim"
 ENT.PrintName					= "A-10 Thunderbolt DEMO"
 ENT.Author						= "Hoffa"
@@ -90,7 +90,7 @@ ENT.CamPos3rd = Vector( 700, 0, 100 )
 
 -- Primary Weapon Stuff
 ENT.NA_TracerName = "AirboatGunTracer" 
-ENT.NA_PrimaryAttackSound = "A10fart_2.mp3"
+ENT.NA_PrimaryAttackSound = "a10fart_2.mp3"
 ENT.NA_PrimaryAttackEffect = "AA_muzzleflash"
 ENT.NA_DefaultMaingunImpactFX = "30cal_impact"
 
