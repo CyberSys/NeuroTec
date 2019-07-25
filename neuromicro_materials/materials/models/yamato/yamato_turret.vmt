@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/Yamato/Yamato_turret"
+	"$nocull" "1"
+}

@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "Models/aftokinito/NeuroPlanes/Common/overlay3"
+	"$translucent" 1
+}

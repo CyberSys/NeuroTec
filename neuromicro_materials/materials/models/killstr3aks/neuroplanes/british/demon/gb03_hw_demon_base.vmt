@@ -1,0 +1,14 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "Models\Killstr3aKs\Neuroplanes\British\Demon\GB03_HW_DEMON_base"
+	"$bumpmap" "Models\Killstr3aKs\Neuroplanes\British\Demon\GB03_HW_DEMON_NM"
+	"$surfaceprop" "Metal"
+	"$nocull" "1"
+	"$halflambert" "1"
+
+	"$phong" "1"
+//	"$phongexponenttexture" "models/NV/Vehicles/B29/nv_b29_e"
+	"$phongexponent" 100
+	"$phongboost" "1"
+	"$phongfresnelranges"	"[ .8 1.6 8]"
+}

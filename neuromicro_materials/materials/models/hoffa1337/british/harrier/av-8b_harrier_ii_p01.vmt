@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/Hoffa1337/British/Harrier/AV-8B_Harrier_II_P01"
+	"$bumpmap" "models/Hoffa1337/British/Harrier/AV-8B_Harrier_II_N"
+	 $alphatest 1 
+} 

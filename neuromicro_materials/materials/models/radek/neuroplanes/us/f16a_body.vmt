@@ -1,0 +1,18 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/Radek/NeuroPlanes/US/f16a_body"
+	"$bumpmap" "models/Radek/NeuroPlanes/US/f16a_body_normal"
+	"$nocull" 1
+	"$halflambert" "1"
+
+	"$phong" "1"
+//	"$phongexponenttexture" "models/NV/Vehicles/B29/nv_b29_e"
+	"$phongexponent" 10
+	"$phongboost" "3"
+	"$phongfresnelranges"	"[ .8 1.6 8]"
+
+	"$rimlight" "1"						
+	"$rimlightexponent" "8"				
+	"$rimlightboost" ".3"
+	"$rimmask" "1"
+}

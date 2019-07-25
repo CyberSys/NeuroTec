@@ -1,0 +1,15 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/StarChick971/NeuroNaval/HMS U Class Submarine/ceec2100"
+	"$bumpmap" "models/StarChick971/NeuroNaval/HMS U Class Submarine/1f5b06d6"
+	"$surfaceprop" "Metal"
+	"$nocull" "1"
+	"$halflambert" "1"
+
+	"$phong" "1"
+//	"$phongexponenttexture" "models/NV/Vehicles/B29/nv_b29_e"
+	"$phongexponent" 100
+	"$phongboost" "1"
+	"$phongfresnelranges"	"[ .8 1.6 8]"
+
+}

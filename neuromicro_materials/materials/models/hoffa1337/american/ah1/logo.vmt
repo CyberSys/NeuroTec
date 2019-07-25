@@ -1,0 +1,8 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/Hoffa1337/American/ah1/logo"
+	"$bumpmap" "models/Hoffa1337/American/ah1/logo_N"
+	"$surfaceprop" "metal"
+	"$nocull" "1"
+	"$halflambert" "1"
+} 

@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/Hoffa1337/German/he115/Fuse_T_L"
+	"$bumpmap"	"models/Hoffa1337/German/he115/Fuse_T_L_bump"
+	 $alphatest 1 
+} 

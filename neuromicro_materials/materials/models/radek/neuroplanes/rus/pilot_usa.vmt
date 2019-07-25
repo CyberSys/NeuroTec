@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/Radek/NeuroPlanes/RUS/Pilot_usa"
+	"$translucent" 1
+}

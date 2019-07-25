@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/Hoffa1337/British/Harrier/Glass_Cockpit"
+	 $alphatest 1 
+} 

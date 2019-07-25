@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/Hoffa1337/Misc/Heli/T_FZ_Helicopter_01_C_D"
+	"$bumpmap" "models/Hoffa1337/Misc/Heli/T_FZ_Helicopter_01_C_N"
+} 

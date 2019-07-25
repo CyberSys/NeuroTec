@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "models/Radek/NeuroPlanes/US/Glass_Cockpit"
+	"$envmap" "env_cubemap"
+}

@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "Models\Killstr3aKs\Neuroplanes\British\Bulldog\GB02_BR105_BULLDOG_base"
+	"$bumpmap" "Models\Killstr3aKs\Neuroplanes\British\Bulldog\GB02_BR105_BULLDOG_NM"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+}

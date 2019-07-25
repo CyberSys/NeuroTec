@@ -1,0 +1,6 @@
+"UnlitGeneric"
+{
+	"$basetexture" "models/Radek/NeuroPlanes/RUS/Su-47_Berkut_Cockpit"
+	"$normalmap" "models/Radek/NeuroPlanes/RUS/Su-47_Berkut_Cockpit_N"
+	"$translucent" 1
+}

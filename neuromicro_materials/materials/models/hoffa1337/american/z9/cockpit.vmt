@@ -1,0 +1,8 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/Hoffa1337/American/Z9/Cockpit"
+	"$bumpmap" "models/Hoffa1337/American/Z9/Cockpit_n"
+	"$surfaceprop" "metal"
+	"$nocull" "1"
+	"$halflambert" "1"
+} 

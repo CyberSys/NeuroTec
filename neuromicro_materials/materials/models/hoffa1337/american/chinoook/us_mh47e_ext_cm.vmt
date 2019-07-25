@@ -1,0 +1,8 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/Hoffa1337/American/Chinoook/US_MH47E_EXT_CM"
+	"$bumpmap" "models/Hoffa1337/American/Chinoook/US_MH47E_EXT_NM"
+	"$surfaceprop" "metal"
+	"$nocull" "1"
+	"$halflambert" "1"
+} 

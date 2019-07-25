@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "Models\Hoffa1337\Sweden\Saab\Saab-35_Draken_P01"
+	"$bumpmap" "Models\Hoffa1337\Sweden\Saab\Saab-35_Draken_N"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+}

@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "Models/aftokinito/NeuroPlanes/Common/glass"
+	"$translucent" 1
+}

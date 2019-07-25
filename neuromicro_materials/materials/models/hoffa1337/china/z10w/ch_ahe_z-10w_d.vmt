@@ -1,0 +1,8 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/Hoffa1337/China/Z10W/ch_ahe_z-10w_d"
+	"$bumpmap" "models/Hoffa1337/China/Z10W/ch_ahe_z-10w_n"
+	"$surfaceprop" "metal"
+	"$nocull" "1"
+	"$halflambert" "1"
+} 

@@ -1,0 +1,14 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "Models\Killstr3aKs\American\Clemson\AGT042_21in_Torpedo_Tubes_Triple_a"
+	"$bumpmap" "Models\Killstr3aKs\American\Clemson\AGT042_21in_Torpedo_Tubes_Triple_n"
+	"$surfaceprop" "Metal"
+	"$nocull" "1"
+	"$halflambert" "1"
+
+	"$phong" "1"
+//	"$phongexponenttexture" "models/NV/Vehicles/B29/nv_b29_e"
+	"$phongexponent" 100
+	"$phongboost" "1"
+	"$phongfresnelranges"	"[ .8 1.6 8]"
+}

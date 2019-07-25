@@ -1,0 +1,15 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "Models\Killstr3aKs\American\Omaha\Material"
+	"$bumpmap" "Models\Killstr3aKs\American\Omaha\ASC005_Omaha_1923_n"
+	$detail detail\metal_detail_01
+	$detailscale 50
+	"$surfaceprop" "Metal"
+	"$halflambert" "1"
+
+	"$phong" "1"
+//	"$phongexponenttexture" "models/NV/Vehicles/B29/nv_b29_e"
+	"$phongexponent" 100
+	"$phongboost" "1"
+	"$phongfresnelranges"	"[ .8 1.6 8]"
+}

@@ -1,0 +1,9 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "Models\Killstr3aKs\Neuroplanes\German\FW190A5\GR31_FW190A1_propeller"
+	"$bumpmap" "Models\Killstr3aKs\Neuroplanes\German\FW190A5\GR31_FW190A1_propeller"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+	"$translucent" 1
+	"alphatest" 1
+}

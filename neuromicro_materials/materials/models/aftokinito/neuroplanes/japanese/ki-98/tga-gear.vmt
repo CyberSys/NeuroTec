@@ -1,0 +1,18 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/aftokinito/NeuroPlanes/Japanese/Ki-98/TGA-gear"
+		"$surfaceprop" "Metal"
+	"$nocull" "1"
+	"$halflambert" "1"
+	
+	"$phong" "1"
+//	"$phongexponenttexture" "models/NV/Vehicles/B29/nv_b29_e"
+	"$phongexponent" 10
+	"$phongboost" "2"
+	"$phongfresnelranges"	"[ .8 1.6 8]"
+	
+	"$rimlight" "1"						
+	"$rimlightexponent" "8"				
+	"$rimlightboost" ".3"
+	"$rimmask" "1"
+} 

@@ -1,0 +1,8 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/Hoffa1337/Russian/Mi-28/Tex_0007_1"
+	"$bumpmap" "models/Hoffa1337/Russian/Mi-28/Tex_0006_2"
+	"$ssbump"	"1"
+	"$SSBumpMathFix"	1	
+	 $alphatest 1 
+} 

@@ -1,0 +1,14 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/Radek/NeuroPlanes/RUS/low_Su-47_Berkut_P01"
+	"$normalmap" "models/Radek/NeuroPlanes/RUS/Su-47_Berkut_N"
+
+	
+	"$phong" "1"
+//	"$phongexponenttexture" "models/NV/Vehicles/B29/nv_b29_e"
+	"$phongexponent" 2
+	"$phongboost" "0.1"
+	"$phongfresnelranges"	"[ .7 1.2 5]"
+	"$PhongAlbedoTint" "1"
+
+}
