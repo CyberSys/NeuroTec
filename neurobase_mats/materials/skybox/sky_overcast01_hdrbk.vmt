@@ -1,0 +1,9 @@
+"Sky"
+{
+"$hdrcompressedTexture " "skybox/sky_overcast01_hdrbk"
+"$nofog" "1"
+"$ignorez" "1"
+"$basetexture " "skybox/sky_overcast01bk"
+"$basetexturetransform " "center 0 0 scale 1 2 rotate 0 translate 0 0"
+"$color""[.7 .72 .75]"
+}

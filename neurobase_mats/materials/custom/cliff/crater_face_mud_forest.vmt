@@ -1,0 +1,12 @@
+"WorldVertexTransition"
+{
+	"$basetexture" "nature/mudfloor001a"
+	"$basetexture2" "custom/cliff/crater_face_forest"
+	"$normalmap" "custom/cliff/crater_face_norm"
+	"$surfaceprop" "Rock"
+	$detail detail\rock_detail_01
+	$detailscale 11
+	$detailblendfactor 1
+	$detailblendmode 0
+	"$blendmodulatetexture"    "custom/cliff/snowgrassblendtexture"
+}

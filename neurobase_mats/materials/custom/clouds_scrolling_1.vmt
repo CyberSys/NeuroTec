@@ -1,0 +1,23 @@
+"UnlitGeneric"
+{
+	"$basetexture" "custom/clouds_scrolling_1"
+	"$translucent" "1"
+	"$nofog" "1"
+		"Proxies"
+
+		{
+
+			"TextureScroll"
+
+			{
+
+			"texturescrollvar" "$baseTextureTransform"
+
+			"texturescrollrate" 0.01
+
+			"texturescrollangle" 0
+
+			}
+
+		}
+}

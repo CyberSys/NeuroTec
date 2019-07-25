@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/Sillirion/anvil/anvil"
+        "$surfaceprop" "solidmetal"
+}

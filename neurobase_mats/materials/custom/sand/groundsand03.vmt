@@ -1,0 +1,5 @@
+"LightMappedGeneric"
+{
+	"$baseTexture"		"custom/sand/groundsand03"
+	"$bumpmap" 		"custom/sand/groundsand03_normal"
+}
