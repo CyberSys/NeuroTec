@@ -1,0 +1,23 @@
+"VertexLitGeneric"
+{
+
+	"$nocull"		"1"
+
+
+	"$baseTexture" 		"themask/Boney/Guts_Upper"
+	"$translucent"		"0"
+	"$alphatest" 		"0"
+
+	"$bumpmap" 		"themask/Boney/Guts_Upper_Bump"
+
+	"$color2" "[.26]"
+
+	"$phong" "1"
+	"$phongexponent" "8"
+	"$phongexponenttexture" "themask/shared/phong_exp"
+	"$phongalbedotint" "1"
+	"$phongboost" ".003" 
+	"$phongfresnelranges"	"[8 80 280]"
+	//"$phongtint"		"[0 0 0]"
+
+}

@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$model"	"1"
+	"$baseTexture" "models\weapons\M79_Texture_map.vtf"
+}

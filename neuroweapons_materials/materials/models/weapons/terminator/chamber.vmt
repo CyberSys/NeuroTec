@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/weapons/Terminator/chamber"
+         "$bumpmap" "models/weapons/Terminator/chamber_n"
+}

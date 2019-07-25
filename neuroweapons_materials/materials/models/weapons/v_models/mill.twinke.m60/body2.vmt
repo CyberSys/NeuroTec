@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+"$basetexture" "models\weapons\v_models\Mill.Twinke.M60\body2"
+"$envmap" "env_cubemap"
+"$envmapmask" "models\weapons\v_models\Mill.Twinke.M60\body2_ref"
+}
+

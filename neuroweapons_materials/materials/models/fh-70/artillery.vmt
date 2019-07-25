@@ -1,0 +1,13 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\FH-70\artillery"
+	"$bumpmap" "models\FH-70\artillery_normal"
+	"$phong" "1"
+	"$phongexponent" "50"
+	"$phongboost" "0.5"	
+	"$phongfresnelranges"	"[1 3 6]"
+	"$nocull" "1"
+	"$rimlight" "1"									
+	"$rimlightexponent" "10"								
+	"$rimlightboost" "0.15"
+}

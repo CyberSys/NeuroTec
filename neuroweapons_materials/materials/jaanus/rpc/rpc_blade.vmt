@@ -1,0 +1,16 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "jaanus/rpc/rpc_blade"
+	"$envmap" "env_cubemap"
+	"$envmapmask" "jaanus/rpc/rpc_blade_spec"
+	"$envmapcontrast "1.0"
+	"$envmapsaturation" [1.0 1.0 1.0]
+	"$phong" "1"
+	"$basemapalphaphongmask" "1"
+ 	"$phongboost" "2" 
+ 	"$phongfresnelranges" [1 1 1]
+ 	"$rimlight" "1"
+ 	"$rimlightexponent" "4" 
+ 	"$rimlightboost" "1"
+ 	"$phongalbedotint" "1"	
+}

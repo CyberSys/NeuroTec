@@ -1,0 +1,11 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/thedoctor/mat_napalm/metallic_base_body"
+	"$surfaceprop" "metal"
+	"$model" 1
+	"$phong" 1
+	"$envmaptint" "[0.3 0.3 0.3]"
+	"$envmap" "env_cubemap"
+	"$envmapmask"		"models/thedoctor/mat_napalm/metallic_base_body"
+}
+

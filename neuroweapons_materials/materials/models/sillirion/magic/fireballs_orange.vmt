@@ -1,0 +1,6 @@
+"UnlitGeneric"
+{
+	"$basetexture" "models/Sillirion/magic/Fireballs_ORANGE"
+        "$alpha" "1"
+        "$translucent" "1"	
+}

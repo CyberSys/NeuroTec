@@ -1,0 +1,9 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\killstr3aks\neuroweapons\rorsch\scope"
+	"$bumpmap" "models\killstr3aks\neuroweapons\rorsch\scope"
+	"$surfaceprop" "Metal"
+	"$nocull" "0"
+	"$halflambert" "1"
+
+}

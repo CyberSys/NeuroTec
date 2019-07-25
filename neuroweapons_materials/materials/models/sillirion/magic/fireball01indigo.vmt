@@ -1,0 +1,6 @@
+"UnlitmappedGeneric"
+{
+	"$basetexture" "models/Sillirion/magic/fireball01Indigo"
+        "$alpha" "1"
+        "$translucent" "1"	
+}

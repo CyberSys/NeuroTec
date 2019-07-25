@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+	
+	"$baseTexture" "Models/project_satan/glass"
+        "$translucent" 1
+        "$alpha" "1"
+}

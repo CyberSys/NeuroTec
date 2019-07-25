@@ -1,0 +1,16 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\Killstr3aKs\Neuroweapons\wingman\body"
+	"$bumpmap" "models\Killstr3aKs\Neuroweapons\wingman\body_n"
+	"$surfaceprop" "Metal"
+	"$nocull" "0"
+	"$halflambert" "1"
+	
+	"$phong" "1"
+	"$phongexponent" 100
+	"$phongexponenttexture" "models\Killstr3aKs\Neuroweapons\wingman\body_s"
+	"$phongboost" "2"
+	"$phongfresnelranges"	"[ .9 1.6 8]"
+	"$phongalbedotint"	"1"
+
+}

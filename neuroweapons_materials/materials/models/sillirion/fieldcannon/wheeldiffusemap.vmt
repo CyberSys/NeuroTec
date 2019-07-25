@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/Sillirion/FieldCannon/WheelDiffuseMap"
+	"$surfaceprop" "Wood_Solid"
+	"$surfaceprop2" "Metal"
+}

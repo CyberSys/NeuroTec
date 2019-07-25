@@ -1,0 +1,15 @@
+
+"VertexLitGeneric"
+{
+	// Original shader: VertexLitTexture
+	"$basetexture" "Models/weapons/w_models/w_eq_smokegrenade/garbage001a_01"
+	"$basealphaenvmapmask" .1
+	"$surfaceprop" "glass"
+	
+}
+
+"VertexLitGeneric_hdr_dx9"
+{
+// put HDR override stuff here
+"$envmaptint" "[ .09 .1 .12]"
+}

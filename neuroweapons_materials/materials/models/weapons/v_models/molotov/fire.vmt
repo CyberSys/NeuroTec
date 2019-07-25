@@ -1,0 +1,14 @@
+"UnLitGeneric"
+{
+ "$basetexture" "sprites/flames2/fire"   
+    "$additive" 1
+      "Proxies"
+{ 
+         "AnimatedTexture" 
+         { 
+            "animatedTextureVar" "$basetexture" 
+            "animatedTextureFrameNumVar" "$frame" 
+            "animatedTextureFrameRate" "16" 
+         }
+    } 
+ }

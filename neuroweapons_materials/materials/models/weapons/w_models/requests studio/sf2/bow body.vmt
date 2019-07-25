@@ -1,0 +1,17 @@
+"VertexLitGeneric"
+{
+"$basetexture" "models\weapons\v_models\Requests Studio\SF2\Bow Body D"
+"$bumpmap" "models\weapons\v_models\Requests Studio\SF2\Bow Body N"
+"$phongexponenttexture" "models\weapons\v_models\Requests Studio\SF2\Bow Body S"
+$phong 1
+$phongboost "0.2"
+$phongalbedoboost 2
+$phongfresnelranges "[.2 .2 1]"
+$basemapalphaphongmask 1
+$envmap env_cubemap
+$envmapfresnel 1
+$envmapFresnelMinMaxExp "[0 .1 .2]"
+$envmaptint "[.02 .02 .02]"
+$phongalbedotint 1
+$phongdisablehalflambert 1
+}

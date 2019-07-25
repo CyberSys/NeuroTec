@@ -1,0 +1,24 @@
+"VertexLitGeneric"
+{
+
+	"$nocull"		"1"
+
+
+	"$baseTexture" 		"themask/Boney/Bones_Dirty"
+	"$translucent"		"0"
+	"$alphatest" 		"0"
+
+	"$bumpmap" 		"themask/Boney/Bones_Bump"
+
+	"$phong" "1"
+	"$phongexponent" "12"
+	//"$phongexponenttexture" "themask/ScenebuildThemes/shared/phong_exp"
+	"$phongalbedotint" "1"
+	"$phongboost" ".004" 
+	"$phongfresnelranges"	"[8 40 180]"
+
+	"$detail" "themask/shared/rock01_detail"
+	$detailscale 5.3
+	$detailblendfactor .5
+	$detailblendmode 0
+}

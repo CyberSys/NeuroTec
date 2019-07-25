@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/Hoffa1337/Stickynade/grenades_col"
+	"$surfaceprop" "metal"
+	"$bumpmap" "models/Hoffa1337/Stickynade/grenades_nml"
+}
+

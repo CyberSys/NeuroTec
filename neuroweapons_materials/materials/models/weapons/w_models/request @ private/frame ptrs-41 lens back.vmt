@@ -1,0 +1,6 @@
+VertexLitGeneric
+{
+"$basetexture"	"models\weapons\v_models\Request @ Private\Frame PTRS-41 Lens Back D"
+"$bumpmap" "models\weapons\v_models\Request @ Private\Frame PTRS-41 Lens Back N"
+"$translucent" "1"
+}

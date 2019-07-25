@@ -1,0 +1,8 @@
+"VertexlitGeneric"
+{
+	"$model" "1"
+	"$basetexture"	"models\weapons\Hands_sleeveless"
+
+	"$surfaceprop" 	"flesh"
+
+}

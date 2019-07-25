@@ -1,0 +1,8 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\Killstr3aKs\Neuroweapons\wingman\detail"
+	"$bumpmap" "models\Killstr3aKs\Neuroweapons\wingman\detail_n"
+	"$surfaceprop" "Metal"
+	"$nocull" "0"
+	"$halflambert" "1"
+}

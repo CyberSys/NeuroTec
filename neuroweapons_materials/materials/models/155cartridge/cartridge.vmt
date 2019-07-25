@@ -1,0 +1,21 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\155cartridge\cartridge"
+	"$bumpmap" "models\155cartridge\cartridge_normal"
+	"$envmap" "env_cubemap"
+	"$normalmapalphaenvmapmask" 1
+//	"$envmapcontrast" 0.1
+	"$envmapsaturation" 0.9
+	"$envmaptint" "{ 131 120 61}"
+ 	"$phong" "1"
+	"$phongexponent" "100"
+	"$phongboost" "0.5"
+	"$phongfresnelranges"	"[2 12 24]"
+	"$phongwarptexture"  "models/155cartridge/cartridge_lightwarp"
+	"$phongalbedotint" "1"
+
+	"$rimlight" "1"												// To enable rim lighting (requires phong)
+	"$rimlightexponent" "20"										// Exponent for phong component of rim lighting	
+	"$rimlightboost" "0.5"
+
+}

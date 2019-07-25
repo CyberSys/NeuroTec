@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "Ranson\flak18a_dmg_snow"
+	"$surfaceprop" "metal"
+	"$model" 1
+}

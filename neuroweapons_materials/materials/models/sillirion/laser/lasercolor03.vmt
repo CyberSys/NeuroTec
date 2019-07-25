@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture" "models/Sillirion/laser/lasercolor03"
+        "$additive" 1
+}

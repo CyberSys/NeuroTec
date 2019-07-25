@@ -1,0 +1,11 @@
+VertexLitGeneric
+{
+$baseTexture "models\hands\Hands_Color"
+$bumpmap "models\hands\Hands_Normal"
+$halflambert 1
+$phong "1"
+$phongexponent "10"
+$phongtint "2 2 2"
+$phongboost ".1"
+$phongfresnelranges "[1 8 13]"
+}

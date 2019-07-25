@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture" "models/Sillirion/laser/laserprojectile02"
+        "$additive" 1
+}

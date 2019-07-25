@@ -1,0 +1,56 @@
+"UnlitTwoTexture"
+{
+
+	"$model" 		"1"
+	"$nocull"		"1"
+
+	"$additive" "1"
+
+
+	"$baseTexture" 		"themask/Boney/Flame"
+	"$texture2" 		"themask/Boney/alphatest"
+	"$translucent"		"1"
+
+	"$distancealpha"	"1"
+
+	$softedges		1
+	$edgesoftnessstart	1
+	$edgesoftnessend	1
+	$scaleedgesoftnessbasedonscreenres 0
+
+	$glow		1
+	$glowcolor	"[2.5 .25 0]"
+	$glowalpha	.12
+	$glowstart	.15
+	$glowend	1.2
+
+"Sine"
+{
+
+"resultVar" "$alpha"
+"sineperiod" 10
+"sinemin" 0.45
+"sinemax" 0.95
+}
+"MaterialModify"
+{
+}
+"CurrentTime"
+{
+"resultVar" "$time"
+}
+
+
+
+
+	Proxies
+	{
+
+		TextureScroll
+		{
+			texturescrollvar 		"$baseTextureTransform"
+			texturescrollrate 	".1"
+			texturescrollangle 	"90"
+		}
+
+}

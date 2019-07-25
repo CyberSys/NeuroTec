@@ -1,0 +1,5 @@
+"vertexlitgeneric"
+{
+	"$basetexture" "models\items\ammo\w_bow_arrow01_d"
+	"$bumpmap" "models\items\ammo\w_bow_arrow01_n"
+}

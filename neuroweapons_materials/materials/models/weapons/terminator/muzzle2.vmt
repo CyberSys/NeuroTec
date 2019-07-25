@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/weapons/Terminator/muzzle2"
+         "$bumpmap" "models/weapons/Terminator/muzzle2_n"
+}

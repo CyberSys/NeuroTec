@@ -1,0 +1,7 @@
+"Vertexlitgeneric"
+{
+	"$basetexture" "models/weapons/v_models/v_bf2_scout/lens"
+	"$surfaceprop" "metal"
+	"$model" 1
+}
+

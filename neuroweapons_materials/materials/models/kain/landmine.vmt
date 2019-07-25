@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+ "$BaseTexture" "models/kain/landmine"
+ "$SurfaceProp" "concrete"
+}

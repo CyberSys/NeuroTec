@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/weapons/Terminator/chaingunDiff"
+        "$bumpmap" "models/weapons/Terminator/chaingunNorm"
+}

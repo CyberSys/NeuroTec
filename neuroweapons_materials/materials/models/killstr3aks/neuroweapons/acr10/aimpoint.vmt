@@ -1,0 +1,10 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\Killstr3aKs\Neuroweapons\ACR10\Aimpoint"
+	"$bumpmap" "models\Killstr3aKs\Neuroweapons\ACR10\Aimpoint"
+	"$surfaceprop" "Metal"
+	"$nocull" "0"
+	"$halflambert" "1"
+	"$alphatest" "1"
+
+}

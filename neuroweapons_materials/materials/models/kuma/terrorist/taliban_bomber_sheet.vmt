@@ -1,0 +1,11 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/kuma/terrorist/taliban_bomber_sheet.vtf"
+	"$bumpmap" "models/kuma/terrorist/taliban_bomber_sheet_normal.vtf"
+	"$normalmapalphaenvmapmask" 1
+
+       	"$halflambert" 1
+	"$nodecal" "1"
+	"$model" "1"
+
+}

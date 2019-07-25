@@ -1,0 +1,12 @@
+"VertexLitGeneric"
+{
+"$basetexture" "models\weapons\v_models\hands\v_hands_sleeves_sf2 d"
+"$bumpmap" "models\weapons\v_models\hands\v_hands_sleeves_sf2 n"
+"$phongexponenttexture" "models\weapons\v_models\hands\v_hands_sleeves_sf2 s"
+"$phong" "1"
+"$phongexponent"  ".1"
+"$phongboost" ".1"
+"$phongfresnelranges" "[0.01 0.01 0.01]"
+"$phongalbedotint" "1"
+"$halflambert" "1"
+}

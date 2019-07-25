@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+	"$basetexture" "vgui/entities/sent_neuro_claymore"
+	"$nolod" 1
+	"$vertexalpha" 1
+	"$vertexcolor" 1
+}

@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{ 
+	"$baseTexture" "models/surgeon/mortarshell"
+	"$model" 1
+	"$surfaceprop" "metal"
+} 

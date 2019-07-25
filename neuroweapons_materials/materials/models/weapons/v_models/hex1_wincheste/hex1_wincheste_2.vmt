@@ -1,0 +1,8 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\\weapons\v_models\hex1_wincheste\/hex1_wincheste_2"
+	"$bumpmap" "models\weapons\v_models\hex1_wincheste\hex1_wincheste_2_norm"
+	"$envmap" "env_cubemap" 
+	"$normalmapalphaenvmapmask" 1	
+}
+

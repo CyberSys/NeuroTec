@@ -1,0 +1,5 @@
+"UnLitGeneric"
+{
+	"$basetexture" "models/weapons/v_models/NoDraw/crowbar_cyl"
+          "$no_draw" "1"
+}

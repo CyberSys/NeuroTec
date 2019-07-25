@@ -1,0 +1,13 @@
+"VertexLitGeneric"
+{
+"$basetexture" "models\weapons\v_models\Requests Studio\SF2\skin_1"
+"$bumpmap" "models\weapons\v_models\Requests Studio\SF2\Bow Body N"
+"$phongexponenttexture" "models\weapons\v_models\Requests Studio\SF2\Bow Body S"
+"$phong" "1"
+"$phongboost" "1"
+"$nocull" "1"
+"$phongfresnelranges" "[0.08 0.08 0.07]"
+"$phongalbedotint" "1"
+"$halflambert" "1"
+"$phongexponent" "137"
+}

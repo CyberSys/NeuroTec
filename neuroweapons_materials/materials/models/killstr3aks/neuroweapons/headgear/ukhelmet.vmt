@@ -1,0 +1,9 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\Killstr3aKs\Neuroweapons\headgear\ukhelmet"
+	"$bumpmap" "models\Killstr3aKs\Neuroweapons\headgear\ukhelmet_n"
+	"$surfaceprop" "Metal"
+	"$nocull" "0"
+	"$halflambert" "1"
+
+}

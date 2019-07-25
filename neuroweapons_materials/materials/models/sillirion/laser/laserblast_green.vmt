@@ -1,0 +1,6 @@
+"UnlitGeneric"
+{
+	"$basetexture" "models/Sillirion/laser/LaserBlast_Green"
+        "$alpha" "1"
+        "$translucent" "1"	
+}

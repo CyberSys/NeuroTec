@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture" "models/Skyrim/Torch/torch_g"
+         "$additive" 1
+}

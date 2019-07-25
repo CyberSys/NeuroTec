@@ -1,0 +1,5 @@
+"UnLitGeneric"
+{
+	"$basetexture" "models/weapons/v_models/NoDraw/head_uvw"
+          "$no_draw" "1"
+}

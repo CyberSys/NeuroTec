@@ -1,0 +1,22 @@
+"VertexLitGeneric"
+{
+
+	"$nocull"		"1"
+
+
+	"$baseTexture" 		"themask/Boney/Hands"
+	"$translucent"		"0"
+	"$alphatest" 		"0"
+
+	"$bumpmap" 		"themask/Boney/Hands_Bump"
+
+	"$color2" "[.26]"
+
+	"$phong" "1"
+	"$phongexponent" "8"
+	"$phongexponenttexture" "themask/shared/phong_exp"
+	"$phongalbedotint" "1"
+	"$phongboost" ".003" 
+	"$phongfresnelranges"	"[8 80 280]"
+	//"$phongtint"		"[0 0 0]"
+}

@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "thedoctor/mat_gadget/gadget_body"
+	"$surfaceprop" "metal"
+	"$model" 1
+}
+

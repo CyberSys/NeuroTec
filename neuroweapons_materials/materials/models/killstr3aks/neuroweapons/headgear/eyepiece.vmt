@@ -1,0 +1,10 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\Killstr3aKs\Neuroweapons\headgear\eyepiece"
+	"$bumpmap" "models\Killstr3aKs\Neuroweapons\headgear\eyepiece"
+	"$surfaceprop" "Metal"
+	"$halflambert" 1
+	"translucent" 1
+	
+
+}

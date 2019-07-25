@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/weapons/v_grenade/grenades_col"
+	"$surfaceprop" "metal"
+	"$bumpmap" "models/weapons/v_grenade/grenades_nml"
+}
+
