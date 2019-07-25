@@ -1,0 +1,10 @@
+"AddonInfo"
+{
+	"name"		"NeuroTanks"
+	"version"	"not working"
+	"info"		"All ground based vehicles: tanks, cars, trucks, etc... You NEED NeuroBase to make this addon work."
+	"up_date"	"10-2012"
+	"author_name"	"StarChick / Hoffa / Sillirion / Aftokinito / Beat the Zombie"
+	"author_email"	"   "
+	"author_url"	"http://facepunch.com/threads/1160981"
+} 

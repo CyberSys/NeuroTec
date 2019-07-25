@@ -1,0 +1,10 @@
+ENT.Type = "vehicle"
+ENT.Base = "base_anim"
+ENT.PrintName	= "T-80U Russian Tank"
+ENT.Author	= "Hoffa"
+ENT.Category 		= "NeuroTec Ground Units";
+ENT.Spawnable	= false
+ENT.AdminSpawnable = false
+ENT.VehicleType = VEHICLE_TANK
+ENT.HasBinoculars = true
+ENT.IsArtillery = false
