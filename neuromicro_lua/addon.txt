@@ -1,0 +1,10 @@
+"AddonInfo"
+{
+	"name"		"NeuroTec Micro
+	"version"	"not working"
+	"info"		""
+	"up_date"	"4-2015"
+	"author_name"	"StarChick & Hoffa & Killstr3aks & Aftokinito & Sillirion"
+	"author_email"	""
+	"author_url"	"n/a"
+}
