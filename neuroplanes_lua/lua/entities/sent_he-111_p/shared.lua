@@ -1,0 +1,10 @@
+ENT.Type = "vehicle"
+ENT.Base = "base_anim"
+ENT.PrintName	= "Heinkel He-111"
+ENT.Author	= "Hoffa/StarChick"
+ENT.Category 		= "NeuroTec Warbirds";
+ENT.Spawnable	= true
+ENT.AdminSpawnable = false
+ENT.VehicleType = VEHICLE_WARBIRD
+ENT.HasAfterburner = false
+ENT.HasAirbrakes = false

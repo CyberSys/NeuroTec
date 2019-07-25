@@ -1,0 +1,10 @@
+ENT.Type = "vehicle"
+ENT.Base = "base_anim"
+ENT.PrintName	= "Hughes H4"
+ENT.Author	= "Spylord"
+ENT.Category 		= "NeuroTec Civil";
+ENT.Spawnable	= true
+ENT.AdminSpawnable = false
+ENT.VehicleType = VEHICLE_WARBIRD
+ENT.HasAfterburner = false
+ENT.HasAirbrakes = false

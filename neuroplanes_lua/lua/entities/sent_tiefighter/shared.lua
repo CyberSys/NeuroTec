@@ -1,0 +1,9 @@
+ENT.Type = "vehicle"
+ENT.Base = "base_anim"
+ENT.PrintName	= "Tie Fighter"
+ENT.Author	= "Hoffa/StarChick"
+ENT.Category 		= "Spaceship";
+ENT.Information		= "Join the dark side of the force"
+ENT.Spawnable	= true
+ENT.AdminSpawnable = false
+ENT.VehicleType = VEHICLE_SPACECRAFT

@@ -1,0 +1,9 @@
+SOME VEHICLES HAVE DEPENDENCIES IN OTHER ADDONS.
+
+You will need: 
+
+Hawx Planes:
+Hawx for Gmod 10 -> http://hawxmod.googlecode.com/svn/trunk/hawxaddon
+
+Military Models 2:
+http://download850.filefront.com/k33njiy1itmg/14174599/military+Models+2.zip

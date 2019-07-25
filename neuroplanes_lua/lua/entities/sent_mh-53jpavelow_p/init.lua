@@ -1,0 +1,966 @@
+AddCSLuaFile( "cl_init.lua" )
+AddCSLuaFile( "shared.lua" )
+include('shared.lua')
+
+ENT.PrintName	= "MH-53J Pave Low IIIE"
+ENT.Model = "models/bf2/helicopters/mh-53j pave low iiie/mh-53j.mdl"
+//Speed Limits
+ENT.MaxVelocity = 800
+ENT.MinVelocity = -700
+ENT.RotorTimer = 500
+// How much the plane will rotate around the Z axis when turning. Lower Value = More Angle
+ENT.BankingFactor = 6
+
+ENT.InitialHealth = 10000
+ENT.HealthVal = nil
+
+ENT.Destroyed = false
+ENT.Burning = false
+ENT.Speed = 0
+ENT.DeathTimer = 0
+
+// Timers
+ENT.LastAttack = nil
+ENT.LastPrimaryAttack = nil
+ENT.LastSecondaryAttack = nil
+ENT.LastFireModeChange = nil
+ENT.LastRadarScan = nil
+ENT.LastFlare = nil
+ENT.FlareCooldown = 15
+ENT.FlareCount = 20
+ENT.MaxFlares = 20
+
+// Equipment
+ENT.MachineGunModel = "models/bf2/helicopters/rah-66 comanche/rah-66 comanche_cannon.mdl"
+ENT.MachineGunOffset = Vector( 180, 0, -53 )
+ENT.CrosshairOffset = 0
+
+ENT.NumRockets = nil
+ENT.PrimaryCooldown = 0.03
+
+ENT.GotChopperGunner = false
+
+// VTOL specifik variable.
+ENT.isHovering = false
+
+ENT.AutomaticFrameAdvance = true
+
+function ENT:SpawnFunction( ply, tr)
+
+	local SpawnPos = tr.HitPos + tr.HitNormal * 100
+	local vec = ply:GetAimVector():Angle()
+	local newAng = Angle(0,vec.y + 180,0)
+	local ent = ents.Create( "sent_mh-53jpavelow_p" )
+	ent:SetPos( SpawnPos )
+	ent:SetAngles( newAng )
+	ent:Spawn()
+	ent:Activate()
+	
+	return ent
+	
+end
+
+function ENT:Initialize()
+	
+	self.HealthVal = self.InitialHealth
+	local now = CurTime() - 60
+	self.LastPrimaryAttack 		= now
+	self.LastSecondaryAttack 	= now
+	self.LastFireModeChange 	= now
+	self.LastRadarScan 			= now
+	self.LastFlare 				= now
+	self.ChopperGunAttack 		= now
+	self.LastAttack             = now
+	
+	self.MinigunRevolve = 0
+	self.HoverVal = 0
+	self.MoveRight = 0
+	self.RotorVal = 0
+	self.MaxRotorVal = 1600
+	self.RotorMult = self.MaxRotorVal / 2000
+	self.Started = false
+	self.SpinUp = 0
+	
+--	self.LoopSound = CreateSound(self.Entity,Sound("bf2/AH1_start_idle_stop.wav"))
+	self.LoopSound = CreateSound(self.Entity,Sound("npc/attack_helicopter/aheli_rotor_loop1.wav"))
+	self.LoopSound:PlayEx(511,110)
+	self.LoopSound:SetSoundLevel(511)
+	
+	self:SetUseType( SIMPLE_USE )
+	self.IsFlying = false
+	self.Pilot = nil
+
+		/* List of types:
+		Homing
+		Laser // Laser Guided - Optional: specify Damage / Radius for these, see below.
+		Bomb
+		Dumb
+		Pod
+		Effect
+	*/
+	 
+
+	self.Armament = {
+					{ 
+						PrintName = "",
+						Mdl = "models/hawx/weapons/lau-131 a.mdl",
+						Pos = Vector( 150, 110, -70),
+						Ang = Angle( 0, 0, 0),
+						Type = "Effect",
+						Cooldown = 0,
+						isFirst	= nil,
+						Class = ""
+					}; 
+	 
+				}
+	
+	// Armamanet
+	local i = 0
+	local c = 0
+	self.FireMode = 1
+	self.EquipmentNames = {}
+	self.RocketVisuals = {}
+	
+	for k,v in pairs( self.Armament ) do
+		
+		i = i + 1
+		self.RocketVisuals[i] = ents.Create("prop_physics_override")
+		self.RocketVisuals[i]:SetModel( v.Mdl )
+		self.RocketVisuals[i]:SetPos( self:GetPos() + self:GetForward() * v.Pos.x + self:GetRight() * v.Pos.y + self:GetUp() * v.Pos.z )
+		self.RocketVisuals[i]:SetAngles( self:GetAngles() + v.Ang )
+		self.RocketVisuals[i]:SetParent( self )
+		self.RocketVisuals[i]:SetSolid( SOLID_NONE )
+		self.RocketVisuals[i].Type = v.Type
+		self.RocketVisuals[i].PrintName = v.PrintName
+		self.RocketVisuals[i].Cooldown = v.Cooldown
+		self.RocketVisuals[i].isFirst = v.isFirst
+		self.RocketVisuals[i].Identity = i
+		self.RocketVisuals[i].Class = v.Class
+		self.RocketVisuals[i]:Spawn()
+		self.RocketVisuals[i]:SetColor( Color( 255, 255, 255, 255) )
+		self.RocketVisuals[i].LastAttack = CurTime()
+		
+		if ( v.Damage && v.Radius ) then
+			
+			self.RocketVisuals[i].Damage = v.Damage
+			self.RocketVisuals[i].Radius = v.Radius
+		
+		end
+		
+		// Usuable Equipment
+		if ( v.isFirst == true || v.isFirst == nil /* Single Missile*/ ) then
+		
+			if ( v.Type != "Effect" && v.Type != "Flarepod" ) then
+				
+				c = c + 1
+				self.EquipmentNames[c] = {}
+				self.EquipmentNames[c].Identity = i
+				self.EquipmentNames[c].Name = v.PrintName
+				
+			end
+			
+		end
+		
+	end
+	
+	self.NumRockets = #self.EquipmentNames
+	
+	self.RotorPropellerPos = ( self:GetForward() * 10 ) + ( self:GetUp() * 105 )
+	self.TailPropellerPos = ( self:GetForward() * -857 ) + ( self:GetRight() * 25 ) + ( self:GetUp() * 189 )
+
+	self.RotorPropeller = ents.Create("sent_cobra_rotor")
+	self.RotorPropeller:SetPos( self:GetPos() + self.RotorPropellerPos  )
+	self.RotorPropeller:SetAngles( self:GetAngles() )
+	self.RotorPropeller:SetSolid( SOLID_VPHYSICS )
+	self.RotorPropeller:Spawn()
+	self.RotorPropeller.isTouching = false
+	self.RotorPropeller:SetOwner( self )
+	self.RotorPropeller:SetModel( "models/bf2/helicopters/mh-53j pave low iiie/mh-53j_rotor.mdl" )
+	
+	self.RotorPhys = self.RotorPropeller:GetPhysicsObject()	
+	
+	local wheelpos = {}
+	wheelpos[1] = Vector( 355, -4, -114 )
+	wheelpos[2] = Vector( -70, -110, -114 )
+	wheelpos[3] = Vector( -70, -101, -114 )
+
+	wheelpos[4] = Vector( 58, 84, -114 )
+	wheelpos[5] = Vector( -70, 101, -114 )
+	wheelpos[6] = Vector( -70, 110, -114 )
+	
+	local gearpos = {}
+	gearpos[1] = Vector( 355, -4, -84 )
+	gearpos[2] = Vector( -70, -105, -84 )
+	gearpos[3] = Vector( -70, 105, -84 )
+
+	self.Wheels = {}
+	self.Gear = {}
+	//self.WheelWelds = {}
+	
+	for i = 1, 3 do
+		
+		self.Wheels[i] = ents.Create("prop_physics")
+		self.Wheels[i]:SetPos( self:LocalToWorld( wheelpos[i] ) )
+		self.Wheels[i]:SetModel( "models/bf2/helicopters/mh-53j pave low iiie/mh-53j_rtwheel.mdl" )
+		self.Wheels[i]:SetAngles( self:GetAngles() )
+		self.Wheels[i]:Spawn()
+		self.Wheels[i]:SetParent( self )
+		
+		self.Gear[i] = ents.Create("prop_physics")
+		self.Gear[i]:SetPos( self:LocalToWorld( gearpos[i] ) )
+		self.Gear[i]:SetModel( "models/bf2/helicopters/mh-53j pave low iiie/mh-53j_gear.mdl" )
+		self.Gear[i]:SetAngles( self:GetAngles() )
+		self.Gear[i]:Spawn()
+		self.Gear[i]:SetParent( self )
+
+	end
+
+	for i = 4, 6 do
+		
+		self.Wheels[i] = ents.Create("prop_physics")
+		self.Wheels[i]:SetPos( self:LocalToWorld( wheelpos[i] ) )
+		self.Wheels[i]:SetModel( "models/bf2/helicopters/mh-53j pave low iiie/mh-53j_lfwheel.mdl" )
+		self.Wheels[i]:SetAngles( self:GetAngles() )
+		self.Wheels[i]:Spawn()
+		self.Wheels[i]:SetParent( self )
+
+	end
+	
+	if ( self.RotorPhys:IsValid() ) then
+	
+		self.RotorPhys:Wake()
+		self.RotorPhys:SetMass( self.MaxRotorVal )
+		self.RotorPhys:EnableGravity( false )
+		self.RotorPhys:EnableDrag( true )
+		
+	end
+
+	self.TailPropeller = ents.Create("prop_physics")
+	self.TailPropeller:SetModel( "models/bf2/helicopters/mh-53j pave low iiie/mh-53j_tail.mdl" )
+	self.TailPropeller:SetPos( self:GetPos() + self.TailPropellerPos  )
+	self.TailPropeller:SetAngles( self:GetAngles() )
+	self.TailPropeller:Spawn()
+	self.TailPropeller:SetOwner( self )
+	
+	self.TailPhys = self.TailPropeller:GetPhysicsObject()
+	
+	if ( self.TailPhys:IsValid() ) then
+	
+		self.TailPhys:Wake()
+		self.TailPhys:SetMass( 100 )
+		self.TailPhys:EnableGravity( false )
+		self.TailPhys:EnableCollisions( false )
+		
+	end
+
+	local FloatingBarrelPos = {}
+	FloatingBarrelPos[1] = Vector( 126, -166, -76 )
+	FloatingBarrelPos[2] = Vector( 0, -166, -76 )
+	FloatingBarrelPos[3] = Vector( -143, -166, -76 )
+
+	FloatingBarrelPos[4] = Vector( 126, 166, -76 )
+	FloatingBarrelPos[5] = Vector( 0, 166, -76 )
+	FloatingBarrelPos[6] = Vector( -143, 166, -76 )
+	
+	self.FloatingBarrel = {}
+	self.FloatingBarrelPhys = {}
+	
+	for i = 1, 6 do
+
+		self.FloatingBarrel[i] = ents.Create("prop_physics")
+		self.FloatingBarrel[i]:SetPos( self:GetPos() + FloatingBarrelPos[i]  )
+		self.FloatingBarrel[i]:SetAngles( self:GetAngles() )
+		self.FloatingBarrel[i]:SetSolid( SOLID_VPHYSICS )
+		self.FloatingBarrel[i]:Spawn()
+		self.FloatingBarrel[i]:SetParent( self )
+		self.FloatingBarrel[i]:SetOwner( self )
+		self.FloatingBarrel[i]:SetModel( "models/props_borealis/bluebarrel001.mdl" )
+		
+		self.FloatingBarrelPhys[i] = self.FloatingBarrel[i]:GetPhysicsObject()	
+
+		if ( self.FloatingBarrelPhys[i]:IsValid() ) then
+		
+			self.FloatingBarrelPhys[i]:Wake()
+			self.FloatingBarrelPhys[i]:SetMass( 1000 )
+			self.FloatingBarrelPhys[i]:EnableGravity( false )
+			self.FloatingBarrelPhys[i]:EnableCollisions( false )
+			
+		end
+
+	end
+	// Passenger Seats - Gunners
+	self.GunnerSeats = {}
+	self.MountedGuns = {}
+	local gunnerseats,mgpos,gunnerangles,mgang = {},{},{},{}
+	
+	// Seat pos
+	gunnerseats[1] = Vector( 230, -35, -52 )
+	gunnerseats[2] = Vector( 230, 35, -52 )
+	gunnerseats[3] = Vector( 38, -44, -42 )
+	gunnerseats[4] = Vector( 38, 44, -42 )
+	gunnerseats[5] = Vector( -55, -43, -42 )
+	gunnerseats[6] = Vector( -55, 43, -42 )
+	
+	// Mounted gun pos
+	mgpos[1] = Vector( 230, -66, -28 )
+	mgpos[2] = Vector( 230, 66, -28 )
+	
+	// Seat angle
+	gunnerangles[1] = Angle( 0, 180, 0 )
+	gunnerangles[2] = Angle( 0, 0, 0 )
+	gunnerangles[3] = Angle( 0, 90, 0 )
+	gunnerangles[4] = Angle( 0, 90, 0 )
+	gunnerangles[5] = Angle( 0, -90, 0 )
+	gunnerangles[6] = Angle( 0, -90, 0 )
+	
+	// Mounted gun angles
+	mgang[1] = Angle( 0, -90, 0 )
+	mgang[2] = Angle( 0, 90, 0 )
+	
+	local mnt, mntp = {},{}
+	mnt[1] = Angle( 90, 90, 180 )
+	mnt[2] = Angle( 90, -90, 180 )
+	
+	mntp[1] = Vector( 230, -55, -37 )
+	mntp[2] = Vector( 230, 55, -37 )
+	
+	for i=1,2 do 
+	
+		self.MountedGuns[i] = ents.Create( "prop_physics_override" )
+		self.MountedGuns[i]:SetPos( self:LocalToWorld( mgpos[i] ) )
+		self.MountedGuns[i]:SetAngles( self:GetAngles() + mgang[i] )
+		self.MountedGuns[i]:SetModel( "models/weapons/hueym60/m60.mdl" )
+		self.MountedGuns[i]:SetParent( self )
+		self.MountedGuns[i]:SetSolid( SOLID_NONE )
+		self.MountedGuns[i].LastAttack = now
+		self.MountedGuns[i]:Spawn()
+
+		self.GunnerSeats[i] = ents.Create( "prop_vehicle_prisoner_pod" )
+		self.GunnerSeats[i]:SetPos( self:LocalToWorld( gunnerseats[i] ) )
+		self.GunnerSeats[i]:SetModel( "models/nova/jeep_seat.mdl" )
+		self.GunnerSeats[i]:SetKeyValue( "vehiclescript", "scripts/vehicles/prisoner_pod.txt" )
+		self.GunnerSeats[i]:SetKeyValue( "LimitView", "60" )
+		self.GunnerSeats[i].HandleAnimation = function( v, p ) return p:SelectWeightedSequence( ACT_GMOD_SIT_ROLLERCOASTER ) end
+		self.GunnerSeats[i]:SetAngles( self:GetAngles() + gunnerangles[i] )
+		self.GunnerSeats[i]:SetParent( self )
+		self.GunnerSeats[i].MountedWeapon = self.MountedGuns[i]
+		self.GunnerSeats[i]:Spawn()
+		self.GunnerSeats[i].isChopperGunnerSeat = true
+		
+		local mount = ents.Create("prop_physics_override")
+		mount:SetPos( self:LocalToWorld( mntp[i] ) )
+		mount:SetAngles( self:GetAngles() + mnt[i] )
+		mount:SetModel( "models/props_trainstation/tracksign10.mdl" )
+		mount:SetParent( self )
+		mount:SetSolid( SOLID_NONE )
+		mount:Spawn()
+		
+	end
+	
+	for i=3,6 do
+	
+		self.GunnerSeats[i] = ents.Create( "prop_vehicle_prisoner_pod" )
+		self.GunnerSeats[i]:SetPos( self:LocalToWorld( gunnerseats[i] ) )
+		self.GunnerSeats[i]:SetModel( "models/nova/jeep_seat.mdl" )
+		self.GunnerSeats[i]:SetKeyValue( "vehiclescript", "scripts/vehicles/prisoner_pod.txt" )
+		self.GunnerSeats[i]:SetKeyValue( "LimitView", "60" )
+		self.GunnerSeats[i].HandleAnimation = function( v, p ) return p:SelectWeightedSequence( ACT_GMOD_SIT_ROLLERCOASTER ) end
+		self.GunnerSeats[i]:SetAngles( self:GetAngles() + gunnerangles[i] )
+		self.GunnerSeats[i]:SetParent( self )
+		self.GunnerSeats[i]:Spawn()
+	
+	end
+	
+	// Misc
+	self:SetModel( self.Model )	
+	self:PhysicsInit( SOLID_VPHYSICS )
+	self:SetMoveType( MOVETYPE_VPHYSICS )
+	self:SetSolid( SOLID_VPHYSICS )
+	
+	constraint.NoCollide( self, self.RotorPropeller, 0, 0 )	
+	constraint.NoCollide( self, self.TailPropeller, 0, 0 )	
+	self.rotoraxis = constraint.Axis( self.RotorPropeller, self, 0, 0, Vector(0,0,0) , self.RotorPropellerPos, 0, 0, 1, 0,Vector(0,0,1) )
+	self.tailrotoraxis = constraint.Axis( self.TailPropeller, self, 0, 0, Vector(0,0,0) , self.TailPropellerPos, 0, 0, 1, 0, Vector(0,1,0) )
+	
+	self.PhysObj = self:GetPhysicsObject()
+	
+	if ( self.PhysObj:IsValid() ) then
+	
+		self.PhysObj:Wake()
+		self.PhysObj:SetMass( 200000 )
+		self.PhysObj:EnableGravity( true )
+		
+	end
+
+	self:SetNetworkedInt( "health", self.HealthVal )
+	self:SetNetworkedInt( "HudOffset", self.CrosshairOffset )
+	self:SetNetworkedInt( "MaxHealth", self.InitialHealth )
+	self:SetNetworkedInt( "MaxSpeed", self.MaxVelocity )
+    self:SetNetworkedEntity("NeuroPlanesMountedGun", self.ChopperGun )
+	self:StartMotionController()
+	
+end
+
+
+function ENT:OnTakeDamage(dmginfo)
+
+	if ( self.Destroyed ) then
+		
+		return
+
+	end
+	
+	self:TakePhysicsDamage(dmginfo)
+	self.HealthVal = self.HealthVal - dmginfo:GetDamage()
+	self:SetNetworkedInt( "health",self.HealthVal )
+	
+	if ( dmginfo:GetDamagePosition():Distance( self.RotorPropeller:GetPos() ) < 100 && dmginfo:GetDamage() > 500 ) then // Direct blow to the rotor
+		
+		self:Crash()
+	
+	end
+	
+	if ( self.HealthVal < self.InitialHealth * 0.2 && !self.Burning ) then
+	
+		self.Burning = true
+		local p = {}
+		p[1] = self:GetPos() + self:GetForward() * 20 + self:GetRight() * -100 + self:GetUp() * 77
+		p[2] = self:GetPos() + self:GetForward() * 20 + self:GetRight() * 100 + self:GetUp() * 77
+		for _i=1,2 do
+		
+			local f = ents.Create("env_Fire_trail")
+			f:SetPos( p[_i] )
+			f:SetParent( self )
+			f:Spawn()
+			
+		end
+		
+	end
+	
+	if ( self.HealthVal < 100 ) then
+		
+		if( !self.Destroyed ) then
+				
+			self:Crash()
+			
+		end
+		
+	end
+	
+end
+
+function ENT:OnRemove()
+
+	self.LoopSound:Stop()
+	
+	for i=1,3 do
+		self.Wheels[i]:Remove()
+		self.Gear[i]:Remove()		
+	end
+	for i=4,6 do
+		self.Wheels[i]:Remove()
+	end
+
+	if( self.RotorPropeller && IsValid( self.RotorPropeller ) ) then
+		
+		self.RotorPropeller:Remove()
+		
+	end
+	
+	if( self.TailPropeller && IsValid( self.TailPropeller ) ) then
+		
+		self.TailPropeller:Remove()
+	
+	end
+	
+	if( self.Destroyed ) then
+		
+		for i=1,7 do
+			
+			local fx = EffectData()
+			fx:SetOrigin( self:GetPos()+ Vector(math.random(-100,100),math.random(-100,100),math.random(16,72)) )
+			util.Effect("super_explosion", fx)
+		
+		end
+
+	end
+	
+	if ( IsValid( self.Pilot ) ) then
+	
+		self:EjectPilotSpecial()
+	
+	end
+	
+end
+
+
+function ENT:PhysicsCollide( data, physobj )
+	
+	if ( data.Speed > self.MaxVelocity * 0.25 && data.DeltaTime > 0.2 ) then 
+		
+		if ( self:GetVelocity():Length() < self.MaxVelocity * 0.7 ) then
+		
+			if( self.Destroyed && IsValid( self.Pilot ) ) then
+				
+				self:EmitSound("physics/metal/metal_large_debris2.wav",511,100)
+				self.Pilot:EmitSound( "ambient/explosions/explode_3.wav", 511, 100 )
+			else
+			
+				self:EmitSound("physics/metal/metal_box_break1.wav"..math.random(1,2)..".wav", 250, 60 )
+			
+			end
+			
+			self.HealthVal = self.HealthVal * 0.3 + ( math.random(10,25) / 100 )
+		
+		else
+			
+			if( !self.Destroyed ) then
+				
+				self:Crash()
+			
+			end
+			
+		end
+		
+		self:SetNetworkedInt("health",self.HealthVal)
+		
+	end
+	
+end
+
+function ENT:Crash()
+	
+	for k,v in pairs( self.RocketVisuals ) do
+		
+		if( v && IsValid( v ) && math.random(1,2) == 1 ) then
+			
+			v:SetParent( NULL )
+			v:SetSolid( SOLID_VPHYSICS )	
+			v:Fire( "kill", "", 25 )
+			
+			if( self.HealthVal < self.InitialHealth * 0.5 ) then
+				
+				v:Ignite(25,25)
+			
+			end
+			
+			local p = v:GetPhysicsObject()
+			if( p ) then
+				
+				p:Wake()
+				p:EnableGravity( true )
+				p:EnableDrag( true )
+				
+			end
+		
+		end
+		
+	end
+	
+	if( self.rotoraxis && IsValid( self.rotoraxis ) ) then
+		
+		self.rotoraxis:Remove()
+		
+	end
+	
+	if( self.tailrotoraxis && IsValid( self.tailrotoraxis ) ) then
+		
+		if( math.random( 1,4 ) == 1 ) then
+			
+			self.tailrotoraxis:Remove()
+		
+		end
+	
+	end
+	
+	self.RotorPropeller:GetPhysicsObject():EnableGravity( true )
+	self.TailPropeller:GetPhysicsObject():EnableGravity( true )
+	self.RotorPropeller:SetOwner( NULL )
+	self.TailPropeller:SetOwner( NULL )
+	
+	// bye bye
+	self.RotorPhys:ApplyForceCenter( self:GetUp() * ( self.RotorVal * 100 ) + self:GetRight() * ( math.random( -1, 1 ) * ( self.RotorVal * 100 ) ) + self:GetForward() * ( math.random( -1, 1 ) * ( self.RotorVal * 100 ) )  )
+	local ra = self.RotorPhys:GetAngles()
+	self.RotorPhys:SetAngles( ra + Angle( math.random(-5,5),math.random(-5,5),math.random(-5,5) ) )
+	
+	self.RotorPropeller:Fire( "kill", "", 25 )
+	self.TailPropeller:Fire( "kill", "", 25 )
+	
+	if( self.HealthVal < self.InitialHealth * 0.5 ) then
+			
+		self:Ignite( 25, 25 )
+		
+	end
+
+	self.LoopSound:Stop()
+	
+	if( self.RotorVal > 200 ) then
+		
+		self:EmitSound("npc/combine_gunship/gunship_explode2.wav",511,125)
+	
+	end
+	
+	self:Fire( "kill", "", 25 )
+	self.PhysObj:Wake()
+	self.PhysObj:EnableGravity( true )
+	self.PhysObj:EnableDrag( true )
+	self.Destroyed = true
+	
+end
+
+function ENT:EjectPilotSpecial()
+	
+	if ( !IsValid( self.Pilot ) ) then 
+	
+		return
+		
+	end
+	
+	self.Pilot:UnSpectate()
+	self.Pilot:DrawViewModel( true )
+	self.Pilot:DrawWorldModel( true )
+	self.Pilot:Spawn()
+	self.Pilot:SetNetworkedBool( "InFlight", false )
+	self.Pilot:SetNetworkedEntity( "Plane", NULL ) 
+	self:SetNetworkedEntity("Pilot", NULL )
+	self.GotChopperGunner = false
+	
+	self.Pilot:SetPos( self:LocalToWorld( Vector( -450, 160, -60  ) ) )
+	self.Pilot:SetAngles( Angle( 0, self:GetAngles().y,0 ) )
+	self.Owner = NULL
+	self.Pilot:SetScriptedVehicle( NULL )
+	
+	self.Speed = 0
+	self.IsFlying = false
+	self:SetLocalVelocity(Vector(0,0,0))
+	self.Pilot = NULL
+	
+end
+
+function ENT:Use(ply,caller)
+
+	if( ply == self.Pilot ) then return end
+		
+	if ( !self.IsFlying && !IsValid( self.Pilot ) ) then 
+
+		self:GetPhysicsObject():Wake()
+		self:GetPhysicsObject():EnableMotion(true)
+		self.IsFlying = true
+		self.Pilot = ply
+		self.Owner = ply
+		
+		ply:Spectate( OBS_MODE_CHASE  )
+		ply:DrawViewModel( false )
+		ply:DrawWorldModel( false )
+		ply:StripWeapons()
+		ply:SetScriptedVehicle( self )
+		
+		ply:SetNetworkedBool("InFlight",true)
+		ply:SetNetworkedEntity( "Plane", self ) 
+		self:SetNetworkedEntity("Pilot", ply )
+
+		self.Entered = CurTime()
+		
+	else
+		
+		for i=1,#self.GunnerSeats do
+			
+			if( !IsValid( self.GunnerSeats[i]:GetDriver() ) ) then
+				
+				ply:EnterVehicle( self.GunnerSeats[i] )
+				
+				return
+				
+			end
+		
+		end
+	
+	end
+	
+end
+
+function ENT:Think()
+
+	self.Pitch = math.Clamp( math.floor( self:GetVelocity():Length() / 100 + 100 ),0,205 )
+	self.LoopSound:ChangePitch( self.Pitch, 0.01 )
+	
+	if ( self.Destroyed && self.HealthVal < self.InitialHealth * 0.5 && self:WaterLevel() < 2 ) then 
+		
+		local effectdata = EffectData()
+		effectdata:SetOrigin( self:GetPos() + self:GetRight() * math.random( -32, 32 ) + self:GetForward() * math.random( -32, 32 )  )
+		util.Effect( "immolate", effectdata )
+		
+	end
+	
+	if ( self.IsFlying && IsValid( self.Pilot ) ) then
+		
+		self.Pilot:SetPos( self:GetPos() + self:GetUp() * 72 )
+		
+		// HUD Stuff
+		self:UpdateRadar()
+		
+		// Flares
+		if ( self.Pilot:KeyDown( IN_SCORE ) && !self.isHovering && self.FlareCount > 0 && self.LastFlare + self.FlareCooldown <= CurTime() && self.LastFireModeChange + 0.2 <= CurTime() ) then
+			
+			self.LastFireModeChange = CurTime()
+			self.FlareCount = self.FlareCount - 1
+			self:SetNetworkedInt( "FlareCount", self.FlareCount )
+			self:SpawnFlare()
+			
+			if ( self.FlareCount == 0 ) then
+			
+				self.LastFlare = CurTime() 
+				self.FlareCount = self.MaxFlares
+				
+			end
+			
+		end
+	
+		if ( self.Pilot:KeyDown( IN_USE ) && self.Entered + 1.0 <= CurTime() ) then
+
+			self:EjectPilotSpecial()
+			
+		end	
+		
+		// Ejection Situations.
+		if ( self:WaterLevel() > 2 ) then
+		
+			self:EjectPilotSpecial()
+			
+		end
+
+	end
+
+	// Gunners
+	for i=1,#self.GunnerSeats do
+		
+		local seat = self.GunnerSeats[i]
+		local gunner = seat:GetDriver()
+		local Minigun = seat.MountedWeapon
+		
+		if( IsValid( seat ) && IsValid( gunner ) && IsValid( Minigun ) ) then
+		
+			local ang = gunner:EyeAngles()
+			
+			if ( gunner:KeyDown( IN_ATTACK ) && Minigun.LastAttack + 0.1 <= CurTime() ) then
+				
+				ang = ang + Angle( math.Rand(-.4,.4), math.Rand(-.4,.4), math.Rand(-.4,.4) )
+				
+				local bullet = {} 
+				bullet.Num 		= 1
+				bullet.Src 		= Minigun:GetPos() + Minigun:GetForward() * 100
+				bullet.Dir 		= Minigun:GetAngles():Forward()					// Dir of bullet 
+				bullet.Spread 	= Vector( .03, .03, .03 )				// Aim Cone 
+				bullet.Tracer	= 2											// Show a tracer on every x bullets  
+				bullet.Force	= 0						 				// Amount of force to give to phys objects 
+				bullet.Damage	= 0
+				bullet.AmmoType = "Ar2" 
+				bullet.TracerName = "AirboatGunHeavyTracer" 
+				bullet.Callback = function ( a, b, c )
+				
+										local effectdata = EffectData()
+											effectdata:SetOrigin( b.HitPos )
+											effectdata:SetStart( b.HitNormal )
+											effectdata:SetNormal( b.HitNormal )
+											effectdata:SetMagnitude( 80 )
+											effectdata:SetScale( 10 )
+											effectdata:SetRadius( 30 )
+										util.Effect( "ImpactGunship", effectdata )
+										
+										util.BlastDamage( gunner, gunner, b.HitPos, 256, 5 )
+										
+										return { damage = true, effects = DoDefaultEffect } 
+										
+									end 
+									
+				Minigun:FireBullets( bullet )	
+				Minigun:EmitSound( "npc/turret_floor/shoot"..math.random(2,3)..".wav", 511, 60 )
+
+				local effectdata = EffectData()
+					effectdata:SetStart( Minigun:GetPos() )
+					effectdata:SetOrigin( Minigun:GetPos() )
+				util.Effect( "RifleShellEject", effectdata )  
+
+				local e = EffectData()
+					e:SetStart( Minigun:GetPos()+Minigun:GetForward() * 62 )
+					e:SetOrigin( Minigun:GetPos()+Minigun:GetForward() * 62 )
+					e:SetEntity( Minigun )
+					e:SetAttachment(1)
+				util.Effect( "ChopperMuzzleFlash", e )
+
+				Minigun.LastAttack = CurTime()
+		
+			end
+
+			
+			Minigun:SetAngles( ang )
+		end
+		
+	end
+
+	self:NextThink( CurTime() )
+		
+	return true
+	
+end
+
+function ENT:PhysicsSimulate( phys, deltatime )
+	
+	local a = self:GetAngles()
+	local p,r = a.p,a.r
+	local stallAng = ( p > 90 || p < -90 || r > 90 || r < -90 )
+	
+	self:HelicopterSpinThatThing()
+	
+	if ( stallAng ) then
+		
+		self.Speed = self.Speed / 1.1
+		
+	end
+	
+	if ( self.IsFlying && !stallAng && self.Started && !self.Destroyed && !self.RotorPropeller.isTouching ) then
+		
+		phys:Wake()
+		
+		local pilotAng = self.Pilot:GetAimVector():Angle()
+		local a = self.Pilot:GetPos() + self.Pilot:GetAimVector() * 3000 + self:GetUp() * 256 // This is the point the plane is chasing.
+		local ta = ( self:GetPos() - a ):Angle()
+		local ma = self:GetAngles()
+		self.offs = self:VecAngD( ma.y, ta.y )		
+		local r = r or 0
+		local maxang = 38
+
+		local vel = self:GetVelocity():Length()
+		if ( vel > -600 && vel < 600 ) then
+			
+			self.isHovering = true
+			self.BankingFactor = 15
+		
+		else
+		
+			self.isHovering = false
+			self.BankingFactor = 6
+			
+		end
+	
+		if ( self.Pilot:KeyDown( IN_JUMP ) ) then
+			
+			self.HoverVal = self.HoverVal + 1.65
+			
+		elseif ( self.Pilot:KeyDown( IN_DUCK ) ) then
+			
+			self.HoverVal = self.HoverVal - 1.5
+		
+		end
+		
+		self.HoverVal = math.Clamp( self.HoverVal, -550, 600 )
+
+		if( self.offs < -160 || self.offs > 160 ) then
+			
+			r = 0
+
+		else
+
+			r = ( self.offs / self.BankingFactor ) * -1
+
+		end
+
+		if ( self:GetVelocity():Length() < 1000 ) then 
+		
+			if ( self.Pilot:KeyDown( IN_MOVELEFT ) ) then
+				
+				self.MoveRight = self.MoveRight - 2.5
+				r  = -11
+				
+			elseif (  self.Pilot:KeyDown( IN_MOVERIGHT ) ) then
+				
+				self.MoveRight = self.MoveRight + 2.5
+				r = 11
+				
+			else
+				
+				self.MoveRight = math.Approach( self.MoveRight, 0, 0.995 )
+			
+			end
+
+			self.MoveRight = math.Clamp( self.MoveRight, -556, 556 )
+		
+		else
+		
+			self.MoveRight = math.Approach( self.MoveRight, r * 10, 0.555 )
+		
+		end
+		
+		if ( ma.p > 2.5 ) then
+	
+			self.Speed = self.Speed + ma.p / 4.1
+		
+		elseif ( ma.p < -6.1 ) then
+			
+			self.Speed = self.Speed + ma.p / 3.5
+		
+		elseif ( ma.p > -6.1 && ma.p < 3 ) then
+		
+			self.Speed = self.Speed / 1.002
+		
+		end
+		
+		if ( self.Pilot:KeyDown( IN_WALK ) || IsValid( self.LaserGuided ) ) then
+			
+			--// Pull up the nose if we're going too fast.
+			if( math.floor(self:GetVelocity():Length() / 1.8 ) > 500 && !( self.MoveRight > 500 || self.MoveRight < -500 ) ) then 
+			
+				pilotAng.p = -20
+				self.HoverVal = self.HoverVal / 1.05
+				
+			else
+				
+				pilotAng.p = 0 + ( math.sin( CurTime() - (self:EntIndex() * 10 ) ) / 2 ) * 1.9
+				pilotAng.r = pilotAng.r + math.cos( CurTime() - ( self:EntIndex() * 2 ) / 4 ) * 1.45
+				
+			end
+			
+			self.Speed = self.Speed / 1.0055
+		
+		end
+		
+		self.Speed = math.Clamp( self.Speed, self.MinVelocity, self.MaxVelocity )
+		
+		local pr = {}
+		local wind = Vector( math.sin( CurTime() - ( self:EntIndex() * 2 ) ) * 6, math.cos( CurTime() - ( self:EntIndex() * 2 ) ) * 5.8, math.sin( CurTime() - ( self:EntIndex() * 3 ) ) * 7 )
+		
+		if( self.HealthVal < 400 ) then
+		
+			local t = t or 0.15
+			t = math.Approach( t, 4.5, 0.15 )
+			
+			wind = Vector( math.sin(CurTime() - ( self:EntIndex()*10) )*38 + math.random(-64,64),math.cos(CurTime() - ( self:EntIndex()*10) )*38 + math.random(-64,64), -0.01 ) 
+			pilotAng.y = pilotAng.y + t
+			self.HoverVal = self.HoverVal / 2 - 5
+			
+		end
+		
+		//print( r.." "..self.offs )
+		
+		pilotAng.p = math.Approach( pilotAng.p, self:GetAngles().p, 0.15 )
+		
+		local desiredPos = self:GetPos() + self:GetForward() * self.Speed + self:GetUp() * self.HoverVal + self:GetRight() * self.MoveRight// + wind
+		pr.secondstoarrive	= 1
+		pr.pos 				= desiredPos
+ 		pr.maxangular		= maxang // 400
+		pr.maxangulardamp	= maxang // 10 000
+		pr.maxspeed			= 1000000
+		pr.maxspeeddamp		= 10000
+		pr.dampfactor		= 0.8
+		pr.teleportdistance	= 10000
+		pr.deltatime		= deltatime
+		pr.angle = pilotAng + Angle( 0, 0, r  )
+		
+		phys:ComputeShadowControl(pr)
+	
+	
+	end
+	
+		
+end
+

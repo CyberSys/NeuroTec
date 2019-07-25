@@ -1,0 +1,10 @@
+ENT.Type = "vehicle"
+ENT.Base = "base_anim"
+ENT.PrintName	= "AC-130 \"Spectre\""
+ENT.Author	= "Hoffa"
+ENT.Category 		= "NeuroTec Aviation";
+ENT.Spawnable	= true
+ENT.AdminSpawnable = false
+ENT.VehicleType = VEHICLE_WARBIRD
+ENT.HasAfterburner = false
+ENT.HasAirbrakes = true

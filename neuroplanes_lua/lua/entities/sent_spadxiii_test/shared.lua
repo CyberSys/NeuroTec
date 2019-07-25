@@ -1,0 +1,10 @@
+ENT.Type = "vehicle"
+ENT.Base = "base_anim"
+ENT.PrintName	= "Spad XIII"
+ENT.Author	= "Iñaki, Sillirion, Hoffa"
+ENT.Category 		= "NeuroTec Warbirds";
+ENT.Spawnable	= true
+ENT.AdminSpawnable = true
+ENT.VehicleType = VEHICLE_WARBIRD
+ENT.HasAfterburner = false
+ENT.HasAirbrakes = false

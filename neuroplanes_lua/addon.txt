@@ -1,0 +1,10 @@
+"AddonInfo"
+{
+	"name"		"NeuroTec Aviation 0.9"
+	"version"	"not working"
+	"info"		"All aircrafts, spaceships, you need to dogfight! You NEED NeuroBase to make this addon work."
+	"up_date"	"10-2012"
+	"author_name"	"Hoffa/StarChick"
+	"author_email"	"robin.hofstrom@gmail.com"
+	"author_url"	"n/a"
+}
