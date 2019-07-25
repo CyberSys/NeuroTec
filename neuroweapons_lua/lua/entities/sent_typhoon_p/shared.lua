@@ -1,0 +1,9 @@
+ENT.Type = "anim"
+ENT.Base = "base_anim"
+ENT.PrintName	= "RIM-116 RAM"
+ENT.Author	= "Hoffa,StarChick,Sillirion"
+ENT.Description = "RIM-116 Rolling Airframe Missile"
+ENT.Category 		= "NeuroTec Weapons";
+ENT.Spawnable	= true
+ENT.AdminSpawnable = false
+ENT.VehicleType = WEAPON_TURRET

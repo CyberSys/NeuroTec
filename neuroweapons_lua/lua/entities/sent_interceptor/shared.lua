@@ -1,0 +1,9 @@
+ENT.Type = "anim"
+ENT.Base = "base_anim"
+ENT.Author			= "Sillirion"
+ENT.Category 		= "NeuroTec Weapons"
+ENT.Spawnable			= true
+ENT.AdminSpawnable		= true
+ENT.PrintName			= "Interceptor" -- Sillirion You Must name ents or you break the q-menu"
+ENT.Purpose			= "Attacking planes and missiles"
+ENT.Instructions	= "Spawn and press use to activate"

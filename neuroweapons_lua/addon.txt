@@ -1,0 +1,10 @@
+"AddonInfo"
+{
+	"name"		"NeuroTec Weapons"
+	"version"	"not working"
+	"info"		"All usable weapons like turrets, mines, bombs, etc... You NEED NeuroBase to make this addon work."
+	"up_date"	"10-2012"
+	"author_name"	"Hoffa,Sillirion"
+	"author_email"	"robin.hofstrom@gmail.com"
+	"author_url"	"n/a"
+}

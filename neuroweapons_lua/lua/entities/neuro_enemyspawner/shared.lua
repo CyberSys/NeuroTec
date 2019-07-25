@@ -1,0 +1,9 @@
+ENT.Type = "anim"
+ENT.Base = "base_anim"
+ENT.PrintName	= "Enemy Spawner"
+ENT.Author	= "Hoffa"
+ENT.Description = "Spawns Enemies.. duh"
+ENT.Category 		= "NeuroTec Weapons";
+ENT.Spawnable	= true
+ENT.AdminOnly = true
+ENT.AdminSpawnable = false
