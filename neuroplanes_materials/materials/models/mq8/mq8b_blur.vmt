@@ -1,0 +1,6 @@
+vertexLitGeneric
+{
+	"$basetexture" "models/mq8/mq8b_blur"
+	"$translucent" 1
+	"$nocull" 1
+}

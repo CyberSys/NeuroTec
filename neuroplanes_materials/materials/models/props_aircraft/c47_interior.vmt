@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture"	"models/props_aircraft/c47_interior"
+	"$model"	"1"
+	"$surfaceprop"	"metal"
+}

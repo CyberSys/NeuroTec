@@ -1,0 +1,12 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/blackapache/amraam"
+                "$bumpmap" "models/blackapache/amraam_normal"
+	"$surfaceprop" "metal"
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[ .25 .25 .30 ]"
+	"$selfillum" 0.9
+	"$model" 1
+}
+
+

@@ -1,0 +1,11 @@
+vertexLitGeneric
+{
+	"$basetexture" "models/Apache/c_face"
+	"$surfaceprop" "metal"
+	"$bumpmap"	"models/Apache/c_face_n"
+	"$phong" "1"
+	"$phongexponent" "5"
+	"$phongboost" "0.1"	
+	"$phongfresnelranges"	"[2 3 3]"
+	"$selfillum" 1
+}

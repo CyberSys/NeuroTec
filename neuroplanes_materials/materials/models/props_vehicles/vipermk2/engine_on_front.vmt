@@ -1,0 +1,62 @@
+//MADE BY IÑAKI be kind to give me credit if u use any of this.
+"UnlitTwoTexture"
+{
+	"$basetexture" "sprites/physcannon_bluecore1b"
+//	"$Texture2" "Models\props_lab\security_noise"
+	"$Texture2" "models/props_vehicles/ViperMk2/Engine_on_front"
+//	"$color" "[2 2 2]"
+	"$color2" "[ .8 .9 1]"
+	"$nodecal" "1"
+	"$model" "1"
+	"$nofog" "1"
+
+	"$tex2scale"	"[1 1]"
+
+	"$color" "[0 0.5 1]"
+
+        "$angle" 0.0
+        "$translate" "[0.0 0.0]"
+        "$center" "[0.5 0.5]"
+
+	"Proxies"
+	{
+		"Sine"
+		{
+			"resultVar" "$tex2scale"
+			"sineperiod" 10
+			"sinemin" .8
+			"sinemax" 1
+		}
+
+		"Sine"
+		{
+			"resultVar" "$color"
+			"sineperiod" 1.2
+			"sinemin" 2
+			"sinemax" 4
+		}
+
+		"LinearRamp"
+		{
+			"rate" -1045
+			"initialValue" 0.0
+			"resultVar" "$angle"
+		}
+
+		"TextureTransform"
+		{
+//			"rotateVar" "$angle"
+			"centerVar" "$center"
+			"scaleVar"	"$tex2scale"
+			"resultVar"	"$basetexturetransform"
+		}
+
+		"TextureTransform"
+		{
+			"rotateVar" "$angle"
+			"centerVar" "$center"
+//			"scaleVar"	"$tex2scale"
+			"resultVar"	"$texture2transform"
+		}
+	}
+}

@@ -1,0 +1,7 @@
+"vertexlitgeneric"
+{
+	"$baseTexture" "models\helicopter_soldiers\ct_sas3"
+                "$bumpmap" "models/helicopter_soldiers/ct_sas_normal3"
+                "$surfaceproperties" "flesh"
+
+}

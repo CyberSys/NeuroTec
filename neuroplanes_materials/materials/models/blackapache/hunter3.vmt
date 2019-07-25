@@ -1,0 +1,9 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/blackapache/hunter3"
+                "$bumpmap" "models/blackapache/hunter3_normal"
+	"$surfaceprop" "metal"
+	"$normalmapalphaenvmapmask" "1"
+	"$envmapcontrast" ".7"
+	"$envmapsaturation" "[.8 .8 .8]"
+}

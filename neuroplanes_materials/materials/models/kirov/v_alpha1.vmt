@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture" "models/kirov/V_Kirov"
+	"$basetexture2" "models/kirov/V_Alpha1"
+}

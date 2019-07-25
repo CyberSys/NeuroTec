@@ -1,0 +1,7 @@
+"UnlitGeneric" 
+{ 
+	"$basetexture"		"JetCH/info" 
+      	"$translucent"   "1"
+     	 "$translucency" "1"
+     	 "$ignorez" "1"
+} 

@@ -1,0 +1,26 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\Nirrti\BF2\Vehicles\Air\Eurocopter Tiger\Tiger"
+	"$bumpmap" "models\Nirrti\BF2\Vehicles\Air\Eurocopter Tiger\Tiger_N"
+	"$halflambert" 1
+	"$phong" "1"
+	"$phongexponent" "5"
+	"$phongboost" "2"	
+	"$phongfresnelranges"	"[ .3 1 7 ]"
+	"$halflambert" "1"
+
+	"$rimlight" "1"												// To enable rim lighting (requires phong)
+	"$rimlightexponent" "75"										// Exponent for phong component of rim lighting	
+	"$rimlightboost" "0.05"	
+
+	"$envmap" "env_cubemap"
+	"$envmapcontrast" "1"
+	"$envmaptint" "[ .01 .01 .01 ]"
+
+$color2 "[ 0.75 0.75 0.75 ]"
+$ambientocclusion 1
+$detail "models\Nirrti\BF2\Vehicles\Air\Eurocopter Tiger\wreck"
+$detailscale 1
+$detailblendfactor "1"
+$detailblendmode 0
+}

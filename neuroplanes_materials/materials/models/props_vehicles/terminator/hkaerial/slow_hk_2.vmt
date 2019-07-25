@@ -1,0 +1,21 @@
+//PHONG AND SPECULAR MADE BY IÑAKI
+"VertexlitGeneric"
+{
+	"$basetexture" "models/props_vehicles/Terminator/hkaerial/slow_hk"
+	"$bumpmap" "models/props_vehicles/Terminator/hkaerial/slow_hk_bump"
+	"$surfaceprop" "Metal"
+
+	"$phong" "1"
+	"$phongexponent" "5"
+	"$phongboost" ".5"
+	"$phongfresnelranges"	"[.3 1 4]"
+
+	"$envmap" "env_cubemap"
+	"$normalmapalphaenvmapmask" 1
+	"$envmapfresnel" "1"
+	"$envmapFresnelMinMaxExp" "[.5 .2 .1]"
+	"$envmaptint" "[.3 .3 .5]"
+	"$envmapcontrast" ".5"
+	"$envmapsaturation" ".2"
+}
+

@@ -1,0 +1,26 @@
+Version 1.2
+
+afterburner01 - normal afterburner
+afterburner01_blue - blue afterburner
+
+afterburner01_once - once normal afterburner
+afterburner01_blue_once - once blue afterburner
+
+afterburner01_small - small afterburner
+afterburner01_small_blue - small blue afterburner
+
+
+Changelog:
+
+1.0
+-Removed heat particles.
+-Scaled down "big" systems by 2.
+-Scaled down "small" systems by 10.
+
+1.1
+-Removed "big" systems.
+-Scaled "small" systems up by 10, and then by 2 down, they are now "big" systems.
+-Copied them, and scaled them down by 10, they are now "small" systems.
+
+1.2
+-Added "once" option for each system.

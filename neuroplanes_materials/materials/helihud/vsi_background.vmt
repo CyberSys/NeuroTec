@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+"$basetexture" "HeliHUD/vsi_background"
+"$selfillum" 1
+"$translucent" 1
+       
+}

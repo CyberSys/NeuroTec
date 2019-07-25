@@ -1,0 +1,15 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/COD4/blackhawk_glass_color"
+	"$translucent" 1
+	"$envmap" "models/player/snake/snake-env"
+	"$decal" 1
+} 
+
+
+
+
+
+
+
+

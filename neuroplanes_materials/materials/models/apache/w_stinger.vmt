@@ -1,0 +1,11 @@
+vertexLitGeneric
+{
+	"$basetexture" "models/Apache/w_stinger"
+	"$surfaceprop" "metal"
+	"$bumpmap"	"models/Apache/body_n"
+	"$phong" "1"
+	"$phongexponent" "5"
+	"$phongboost" "0.5"	
+	//"$phongfresnelranges"	"[2 3 3]"
+	"$phongexponenttexture" "models/Apache/body_spec"
+}

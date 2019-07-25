@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+	"$basetexture"		"vgui/entities/sent_f22_raptor_nf_test"
+	"$vertexcolor" 		1
+	"$vertexalpha" 		1
+	"$nolod" 		1
+}

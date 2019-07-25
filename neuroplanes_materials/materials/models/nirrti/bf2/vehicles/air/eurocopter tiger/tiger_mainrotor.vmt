@@ -1,0 +1,15 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\Nirrti\BF2\Vehicles\Air\Eurocopter Tiger\Tiger_mainrotor"
+	"$nocull" 1
+	"$translucent" 1
+	"$decal" 1
+} 
+
+
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\SGG\Starwars\tie_fighter\tie_fighter_wing"
+	"$bumpmap" "models\SGG\Starwars\tie_fighter\tie_fighter_wing_normal"
+	"$halflambert" "1"
+	"$phong" "1"
+	"$phongexponenttexture" "models\SGG\Starwars\tie_fighter\tie_fighter_wing_exp"
+	"$phongexponent" "50"
+	"$phongboost"	".2"
+	"$phongfresnelranges"	"[0.25 0.5 1]"
+}

@@ -1,0 +1,8 @@
+//Added by Iñaki.
+"UnlitGeneric" 
+{ 
+	"$basetexture"		"vgui/entities/sent_viperMk2" 
+	"$vertexcolor" 		1 
+	"$vertexalpha" 		1 
+	"$nolod" 			1 
+} 

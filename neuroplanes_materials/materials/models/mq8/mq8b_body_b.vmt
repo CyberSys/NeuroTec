@@ -1,0 +1,18 @@
+vertexLitGeneric
+{
+	"$basetexture" "models/mq8/mq8b_body_B"
+	"$surfaceprop" "metal"
+	"$bumpmap"	"models/mq8/mq8b_body_n"
+	"$phong" "1"
+	"$phongexponent" "5"
+	"$phongboost" "0.1"	
+	"$phongfresnelranges"	"[2 3 3]"
+	"$selfillum" 0
+
+	"$color2" "[ 1 1 1 ]"
+	"$ambientocclusion" "1"
+	"$detail" "models/mq8/mq8b_body_detail"
+	"$detailscale" "1"
+	"$detailblendfactor" "1"
+	"$detailblendmode" "0"
+}

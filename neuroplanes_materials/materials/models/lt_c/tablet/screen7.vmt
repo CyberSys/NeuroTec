@@ -1,0 +1,33 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\LT_C\Tablet\Screen7"
+	"$bumpmap" "models\LT_C\Tablet\Screen_n"
+	"$halflambert" "1"
+	"$selfillum" "1"
+
+	"$phong" "1"
+	"$phongexponent" 7.5
+	"$phongboost" ".025"
+	"$phongfresnelranges"	"[ .7 1.2 5]"
+	"$PhongAlbedoTint" "1"
+
+	"$rimlight" "1"						
+	"$rimlightexponent" "5"				
+	"$rimlightboost" ".1"
+	"$rimmask" "1"
+
+	$ambientocclusion 1
+	$detail "models\LT_C\Tablet\scanlines"
+	$detailscale 1
+	$detailblendfactor "0.01"
+	$detailblendmode 3
+
+	"Proxies"
+	{
+		"TextureScroll"
+		{
+			"texturescrollvar" "$detailtexturetransform"
+			"texturescrollrate" "1.8"
+			"texturescrollangle" "270"
+		}
+}

@@ -1,0 +1,8 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/Nirrti/BF2/Vehicles/Air/Eurocopter Tiger/xpak2_tiger_cockpit_c"
+	"$bumpmap" "models/Nirrti/BF2/Vehicles/Air/Eurocopter Tiger/xpak2_tiger_cockpit_b"
+	"$nocull" 1
+	 $selfillum 1
+
+}

@@ -1,0 +1,9 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/blackapache/veh_mi24_br"
+                "$bumpmap" "models/blackapache/veh_mi24_br_normal"
+	"$surfaceprop" "metal"
+	"$normalmapalphaenvmapmask" "1"
+	"$envmapcontrast" ".7"
+	"$envmapsaturation" "[.8 .8 .8]"
+}

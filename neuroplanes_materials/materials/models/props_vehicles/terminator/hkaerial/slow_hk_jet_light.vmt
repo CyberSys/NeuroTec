@@ -1,0 +1,30 @@
+//MADE BY IÑAKI
+"UnlitTwoTexture"
+{
+	"$basetexture" "sprites/physcannon_bluecore1b"
+//	"$Texture2" "Models\props_lab\security_noise"
+	"$Texture2" "Models\Weapons\V_smg1\noise"
+	"$color" "[2 2 2]"
+	"$color2" "[ .8 .9 1]"
+	"$nodecal" "1"
+	"$model" "1"
+	"$nofog" "1"
+
+	"Proxies"
+	{
+		"TextureScroll"
+		{
+			"texturescrollvar" "$texture2transform"
+			"texturescrollrate" 4
+			"texturescrollangle" 4
+		}
+
+		"Sine"
+		{
+			"resultVar" "$color"
+			"sinemin" 6.00
+			"sinemax" 8.00
+			"sineperiod" 0.20
+		}
+	}
+}

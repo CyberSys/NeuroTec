@@ -1,0 +1,5 @@
+vertexLitGeneric
+{
+	"$basetexture" "models/Apache/display"
+	"$selfillum" 1
+}

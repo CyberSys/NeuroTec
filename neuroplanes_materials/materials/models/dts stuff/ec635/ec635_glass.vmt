@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\dts stuff\EC635\/ec635_glass"
+        "$translucent" "1"
+}

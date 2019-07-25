@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "jaanus/rpc/rpc_launcher"
+	"$bumpmap" "jaanus/rpc/rpc_launcher_spec"
+}

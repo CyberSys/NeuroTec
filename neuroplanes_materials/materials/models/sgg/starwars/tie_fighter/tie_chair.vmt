@@ -1,0 +1,11 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\SGG\Starwars\tie_fighter\tie_chair"
+	"$bumpmap" "models\SGG\Starwars\tie_fighter\tie_chair_normal"
+	"$halflambert" "1"
+	"$phong" "1"
+	"$phongexponenttexture" "models\SGG\Starwars\tie_fighter\tie_chair"
+	"$phongexponent" "10"
+	"$phongboost"	".02"
+	"$phongfresnelranges"	"[0.25 0.5 1]"
+}

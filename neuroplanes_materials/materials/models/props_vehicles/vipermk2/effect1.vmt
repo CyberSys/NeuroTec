@@ -1,0 +1,34 @@
+//MADE BY IÑAKI be kind to give me credit if u use any of this.
+"UnlitTwoTexture"
+{
+	"$baseTexture" "Models/props_combine/tpballglow"
+	"$Texture2" "Models/props_combine/combine_fenceglow2"
+	"$color" "[2 2 2]"
+	"$color2" "[0.5 0.7 1]"
+//NOOOUUUU!!!
+	"$nocull" "1"	
+	"$nodecal" "1"
+	"$nolod" "1" 
+	"$nofog" "1"
+	"$additive" "1"
+	"$translucent" "1"
+	"$model" "1"
+
+	"Proxies"
+	{
+		"TextureScroll"
+		{
+			"texturescrollvar" "$texture2transform"
+			"texturescrollrate" -1
+			"texturescrollangle" 4
+		}
+		"Sine"
+		{
+			"resultVar" "$color"
+			"sinemin" 4.00
+			"sinemax" 8.00
+			"sineperiod" 0.20
+		}
+	}
+
+}

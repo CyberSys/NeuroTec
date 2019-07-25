@@ -1,0 +1,5 @@
+vertexLitGeneric
+{
+	"$basetexture" "models/Apache/number"
+	"$translucent" 0
+}

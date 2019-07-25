@@ -1,0 +1,5 @@
+vertexLitGeneric
+{
+	"$basetexture" "models/mq8/mq8_tail"
+	"$translucent" 1
+}

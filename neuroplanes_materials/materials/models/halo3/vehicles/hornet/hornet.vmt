@@ -1,0 +1,12 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/HALO3/Vehicles/Hornet/hornet"
+	"$bumpmap" "models/HALO3/Vehicles/Hornet/hornet_bump"
+	"$surfaceprop" "MetalGrate"
+                "$phong" "1"
+                "$phongboost" "1"
+                "$phongfresnelranges" "[1 8 6]"
+                "$phongexponenttexture" ""
+                "$phongalbedotint" "1"
+                "$halflambert" "1"
+}

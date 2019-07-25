@@ -1,0 +1,10 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/bf2/helicopters/Mil Mi-24/Mil Mi-24_cockpit"
+	"$bumpmap" "models/bf2/helicopters/Mil Mi-24/Mil Mi-24_cockpit_bump"
+
+	"$phong" "1"
+	"$phongboost" "1"	
+	"$phongfresnelranges"	"[1 1 1]"
+	"$phongalbedotint" "1"
+}

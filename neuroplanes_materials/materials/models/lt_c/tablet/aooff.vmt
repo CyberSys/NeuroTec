@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\LT_C\Tablet\aooff"
+	"$additive" "1"
+	"$alphatest" "1"
+}

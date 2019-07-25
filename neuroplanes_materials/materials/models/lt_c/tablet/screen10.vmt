@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\LT_C\Tablet\Screen10"
+	"$bumpmap" "models\LT_C\Tablet\Screen_n"
+	"$halflambert" "1"
+	"$selfillum" "1"
+}

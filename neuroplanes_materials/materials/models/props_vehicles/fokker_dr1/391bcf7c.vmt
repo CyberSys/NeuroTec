@@ -1,0 +1,17 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/props_vehicles/fokker_dr1/391bcf7c"
+	"$bumpmap" "dev/flat_normal"
+ 	"$phong" "1"
+	"$phongexponent" "80"
+	"$phongboost"	"1"
+	"$phongfresnelranges"	"[.15 .45 1]"
+
+	">dx90"
+		{
+		"$envmap" "env_cubemap"
+		"$envmaptint" "[.5 .1 .1]"
+		"$envmapfresnel" "1"
+		"$envmapFresnelMinMaxExp" "[.1 .6 .4]"
+		}
+}

@@ -1,0 +1,17 @@
+"vertexlitgeneric"
+{
+	"$additive" 1
+
+	"$basetexture" "models\Nirrti\BF2\Vehicles\Air\Eurocopter Tiger\Tiger_glass"
+	"$envmap" "env_cubemap"
+	"$envmapcontrast" "1"
+	"$envmaptint" "[ 0.75 0.75 0.75 ]"
+	"$model" 1
+	"$halflambert" 1
+	"$bumpmap" "models\Nirrti\BF2\Vehicles\Air\Eurocopter Tiger\Tiger_glass_n"
+	"$phong" "1"
+	"$phongexponent" "75"
+	"$phongboost" "1"	
+	"$phongfresnelranges"	"[ 1 6 15 ]"
+
+}

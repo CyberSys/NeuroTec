@@ -1,0 +1,8 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "Models/blackapache/helicopter_prop_01"
+                "$bumpmap" "models/blackapache/helicopter_prop01_normal"
+	"$surfaceprop" "metal"
+	"$normalmapalphaenvmapmask" 1
+	"nodecal" 1
+}

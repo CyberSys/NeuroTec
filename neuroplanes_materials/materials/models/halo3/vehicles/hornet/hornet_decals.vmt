@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/HALO3/Vehicles/Hornet/hornet_decals"
+	"$surfaceprop" "Metal_Box"
+	"$translucent" 1
+}

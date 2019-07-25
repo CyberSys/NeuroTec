@@ -1,0 +1,13 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\props_vehicles/huey/UH1D2_black"
+             "$bumpmap" "models\props_vehicles/huey/UH1D2_bump"
+      	"$phong" "1"
+	"$phongboost"   "0.2"
+	"$phongfresnelranges" "[0.5 0.5 0.5]"
+	"$phongalbedotint" "1"
+	"$phongexponent"	"10"
+             "$surfaceprop" "metal"
+             "$model" 1
+	"$nocull" 1
+}

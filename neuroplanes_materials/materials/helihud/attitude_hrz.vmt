@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+"$basetexture" "HeliHUD/attitude_hrz"
+"$selfillum" 1
+"$translucent" 1
+       
+}

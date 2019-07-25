@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+"$basetexture" "HeliHUD/compass_dial"
+"$selfillum" 1
+"$translucent" 1
+       
+}

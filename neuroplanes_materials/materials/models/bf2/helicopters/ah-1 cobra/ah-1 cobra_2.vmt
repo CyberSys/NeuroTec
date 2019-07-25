@@ -1,0 +1,10 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/bf2/helicopters/AH-1 Cobra/AH-1 Cobra_2"
+	"$bumpmap" "models/bf2/helicopters/AH-1 Cobra/AH-1 Cobra_bump"
+
+	"$phong" "1"
+	"$phongboost" "1"	
+	"$phongfresnelranges"	"[1 1 1]"
+	"$phongalbedotint" "1"
+}

@@ -1,0 +1,10 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/blackapache/point1"
+                "$bumpmap" "models/blackapache/point1_normal"
+	"$surfaceprop" "metal"
+	"$selfillum" 0
+	"$model" 1
+}
+
+

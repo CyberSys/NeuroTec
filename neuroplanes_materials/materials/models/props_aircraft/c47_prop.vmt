@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+	"$basetexture"	"models/props_aircraft/c47_prop"
+	"$translucent"	"1"
+	"$model"	"1"
+	"$surfaceprop"	"metal"
+}

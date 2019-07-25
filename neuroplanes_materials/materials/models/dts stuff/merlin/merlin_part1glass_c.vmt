@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\dts stuff\Merlin\/merlin_part1glass_c"
+        "$Translucent" "1"
+}

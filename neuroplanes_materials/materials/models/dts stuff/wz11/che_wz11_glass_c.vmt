@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\dts stuff\WZ11\/che_wz11_Glass_c"
+        "$Translucent" "1"
+}

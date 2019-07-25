@@ -1,0 +1,16 @@
+"vertexlitgeneric"
+{
+	"$baseTexture" "models/helicopter_soldiers/ct_sas_glass"
+	
+
+// Specularity
+	"$envmap" 			"env_cubemap"
+	"$envmapmask" "models/helicopter_soldiers/ct_sas_glass_spec"
+
+
+// Transparency
+	"$translucent" 1
+	
+	
+}
+

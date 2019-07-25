@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/kirov/V_Kirov"
+	"$basetexture2" "models/kirov/V_Alpha1"
+	"$alphatest" 1
+}

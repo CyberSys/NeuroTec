@@ -1,0 +1,6 @@
+unlitgeneric
+{
+$envmap env_cubemap
+$nocull 1
+"%notooltexture" 1
+}

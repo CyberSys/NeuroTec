@@ -1,0 +1,12 @@
+vertexLitGeneric
+{
+	"$basetexture" "models/Apache/2R_pod"
+	"$surfaceprop" "metal"
+	"$bumpmap"	"models/Apache/R_pod_n"
+	"$phong" "1"
+	"$phongexponent" "5"
+	"$phongboost" "0.1"	
+	"$phongfresnelranges"	"[2 3 3]"
+	//"$phongexponenttexture" "models/Apache/R_pod_spec"
+	"$selfillum" 0
+}

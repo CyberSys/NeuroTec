@@ -1,0 +1,11 @@
+vertexLitGeneric
+{
+	"$basetexture" "models/mq8/mq8b_rocket"
+	"$surfaceprop" "metal"
+	"$bumpmap"	"models/mq8/mq8b_rocket_n"
+	"$phong" "1"
+	"$phongexponent" "5"
+	"$phongboost" "0.1"	
+	"$phongfresnelranges"	"[2 3 3]"
+	"$selfillum" 0
+}

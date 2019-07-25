@@ -1,0 +1,10 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/bf2/helicopters/MH-53J Pave Low IIIE/MH-53J Pave Low IIIE"
+	"$bumpmap" "models/bf2/helicopters/MH-53J Pave Low IIIE/MH-53J Pave Low IIIE_bump"
+
+	"$phong" "1"
+	"$phongboost" "1"	
+	"$phongfresnelranges"	"[1 1 1]"
+	"$phongalbedotint" "1"
+}

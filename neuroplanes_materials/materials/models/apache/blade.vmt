@@ -1,0 +1,11 @@
+vertexLitGeneric
+{
+	"$basetexture" "models/Apache/blade"
+	"$surfaceprop" "metal"
+	"$bumpmap"	"models/Apache/blade_n"
+	"$phong" "1"
+	"$phongexponent" "5"
+	"$phongboost" "0.5"	
+	"$phongfresnelranges"	"[2 3 3]"
+
+}

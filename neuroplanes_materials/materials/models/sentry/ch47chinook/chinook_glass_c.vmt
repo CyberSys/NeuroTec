@@ -1,0 +1,11 @@
+vertexLitGeneric
+{
+	"$basetexture" "models/sentry/ch47chinook/chinook_glass_c"
+	"$nocull" 1
+ 	"$phong" "1"
+	"$phongexponent" "2"
+	"$phongboost"	"1"
+	"$phongfresnelranges"	"[0.1 0.5 1.5]" // BOOSTED
+	"$phongalbedotint" "1"
+	"$translucent" "1"
+}

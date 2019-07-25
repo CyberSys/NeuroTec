@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/props_vehicles/fokker_dr1/6673ed50"
+	"$translucent" 1
+	"$vertexalpha" 1
+}

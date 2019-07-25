@@ -1,0 +1,13 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/NV/Vehicles/B29/Clean/b29brunprop"
+	"$nocull" "1"
+	"$halflambert" "1"
+	"$translucent" 1
+
+}
+
+
+
+
+

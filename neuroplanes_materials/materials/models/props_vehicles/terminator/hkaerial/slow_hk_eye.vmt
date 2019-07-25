@@ -1,0 +1,21 @@
+//MADE BY IÑAKI
+"UnlitGeneric"
+{
+	"$basetexture" "sprites/redglow3"
+	"$additive" 1
+	"$color" "[2 1.5 1.5]"
+	"$nodecal" "1"
+	"$model" "1"
+	"$nofog" "1"
+
+	"Proxies"
+	{
+		"Sine"
+		{
+			"resultVar" "$color"
+			"sinemin" 4.00
+			"sinemax" 6.00
+			"sineperiod" 5
+		}
+	}
+}

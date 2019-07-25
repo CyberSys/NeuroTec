@@ -1,0 +1,19 @@
+vertexLitGeneric
+{
+	"$basetexture" "models/Apache/body_D"
+	"$surfaceprop" "metal"
+	"$bumpmap"	"models/Apache/body_n"
+	"$phong" "1"
+	"$phongexponent" "5"
+	"$phongboost" "0.1"	
+	"$phongfresnelranges"	"[2 3 3]"
+	"$phongexponenttexture" "models/Apache/body_spec"
+	"$selfillum" 0
+
+	"$color2" "[ 1 1 1 ]"
+	"$ambientocclusion" "1"
+	"$detail" "models/Apache/body_detail"
+	"$detailscale" "1"
+	"$detailblendfactor" "1"
+	"$detailblendmode" "0"
+}

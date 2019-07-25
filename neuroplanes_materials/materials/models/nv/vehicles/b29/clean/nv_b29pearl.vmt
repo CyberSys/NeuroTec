@@ -1,0 +1,13 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/NV/Vehicles/B29/Noses/nv_b29pearl"
+	"$bumpmap" "models/NV/Vehicles/B29/Noses/nose_n"
+	"$nocull" "1"
+	"$halflambert" "1"
+	"$alphatest" 1
+}
+
+
+
+
+

@@ -1,0 +1,10 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/FSX/Mitsubishi J2M Raiden/Mitsubishi J2M"
+	"$bumpmap" "models/FSX/Mitsubishi J2M Raiden/Mitsubishi J2M_bump"
+
+	"$phong" "1"
+	"$phongboost" "1"	
+	"$phongfresnelranges"	"[1 1 1]"
+	"$phongalbedotint" "1"
+}

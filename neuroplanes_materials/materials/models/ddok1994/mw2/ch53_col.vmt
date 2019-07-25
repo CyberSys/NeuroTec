@@ -1,0 +1,10 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/ddok1994/mw2/ch53_col"
+	"$bumpmap" "models/ddok1994/mw2/ch53_nml"
+	"$phong" 		"1"
+	"$phongexponent" 		"30"
+	"$phongboost" 		"0.2"
+	"$phongfresnelranges" 	"[1 3 6]"
+	"$phongalbedotint"		"1"
+}
