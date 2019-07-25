@@ -1,2 +1,2 @@
 # NeuroTec
-Gredwitch's Code
+Gredwitch's Code but fixed for linux servers, let me know of any errors
