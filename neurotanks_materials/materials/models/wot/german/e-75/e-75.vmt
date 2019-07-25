@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/WoT/German/E-75/E-75"
+	"$bumpmap" "models/WoT/German/E-75/E-75_NM"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+}

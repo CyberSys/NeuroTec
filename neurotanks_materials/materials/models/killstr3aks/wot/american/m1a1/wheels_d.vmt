@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\Killstr3aKs\WoT\American\M1A1\wheels_D"
+	"$bumpmap" "models\Killstr3aKs\WoT\American\M1A1\wheels_B"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+}

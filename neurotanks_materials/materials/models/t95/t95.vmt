@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/t95/T95"
+	"$bumpmap" "models/t95/T95_bump"
+}

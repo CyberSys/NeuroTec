@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$alphatest" "1"
+	"$basetexture" "models/vehicles/sdk_tire_snow_c"
+	"$bumpmap" "models/vehicles/sdk_tire_n"
+	"$nocull" "1"
+}

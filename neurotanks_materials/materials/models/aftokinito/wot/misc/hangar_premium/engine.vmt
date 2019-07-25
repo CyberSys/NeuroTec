@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/aftokinito/WoT/Misc/Hangar_Premium/engine"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+}

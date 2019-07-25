@@ -1,0 +1,14 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/props_vehicles/Terminator/salvationhktank/slow_hk_tank"
+	"$bumpmap" "models/props_vehicles/Terminator/salvationhktank/slow_hk_tank_bump"
+
+	"$selfillum" 1
+	"$selifllumtint" "[4 0 0]"
+
+ 	"$phong" "1"
+	"$phongexponent" "7"
+	"$phongboost"	"2.5"
+	"$phongfresnelranges"	"[.15 .45 1]"
+
+}

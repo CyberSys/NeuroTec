@@ -1,0 +1,16 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/WoT/German/Ferdinand/Ferdinand"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+
+	"$phong" 1
+	"$phongexponent" 25
+	"$phongboost" 4
+	"$phongfresnelranges" "[0.4 1 0.1]"
+
+	"$detail" "detail/metal_detail_01"
+	"$detailscale" 4.283
+	"$detailblendfactor" .65
+	"$detailblendmode" 0
+}

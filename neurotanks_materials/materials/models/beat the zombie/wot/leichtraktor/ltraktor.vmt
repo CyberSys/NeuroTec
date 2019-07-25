@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/beat the zombie/WoT/leichtraktor/Ltraktor"
+	"$bumpmap" "models/beat the zombie/WoT/leichtraktor/Ltraktor_NM"
+}

@@ -1,0 +1,16 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/wot/germany/sdkfz140/Pz38_tracks"
+	"$surfaceprop" "Metal"
+	"$alphatest" 1
+	"$nocull" 1
+		"Proxies"
+      	  {
+             	   "TextureScroll"
+              	  {
+                        "texturescrollvar" "$baseTextureTransform"
+                        "texturescrollrate" 0.95
+                        "texturescrollangle" 90
+              	  }
+       }	
+}

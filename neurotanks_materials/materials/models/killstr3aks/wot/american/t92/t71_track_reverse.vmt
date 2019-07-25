@@ -1,0 +1,17 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\Killstr3aKs\WoT\American\T92\T71_track"
+	"$bumpmap" "models\Killstr3aKs\WoT\American\T92\T71_track_NM"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+    "$alphatest" 1
+		"Proxies"
+      	  {
+             	   "TextureScroll"
+              	  {
+                        "texturescrollvar" "$baseTextureTransform"
+                        "texturescrollrate" 3
+                        "texturescrollangle" 90
+              	  }
+       }	
+}

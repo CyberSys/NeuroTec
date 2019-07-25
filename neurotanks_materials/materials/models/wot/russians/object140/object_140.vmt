@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\wot\russians\object140\Object_140"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+}

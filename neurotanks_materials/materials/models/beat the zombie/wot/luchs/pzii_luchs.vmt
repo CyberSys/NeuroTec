@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\beat the zombie\WoT\luchs\PzII_Luchs"
+	"$bumpmap" "models\beat the zombie\WoT\luchs/PzII_Luchs_NM"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+}

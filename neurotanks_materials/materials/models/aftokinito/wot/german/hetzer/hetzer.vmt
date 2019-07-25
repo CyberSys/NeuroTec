@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/aftokinito/WoT/German/Hetzer/Hetzer"
+	"$bumpmap" "models/aftokinito/WoT/German/Hetzer/Hetzer_NM"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+}

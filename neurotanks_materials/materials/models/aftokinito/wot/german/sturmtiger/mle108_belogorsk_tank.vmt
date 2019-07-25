@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/aftokinito/WoT/German/SturmTiger/mle108_Belogorsk_tank"
+	"$bumpmap" "models/aftokinito/WoT/German/SturmTiger/mle108_Belogorsk_tank_NM"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+}

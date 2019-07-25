@@ -1,0 +1,6 @@
+"Sprite"
+{
+	"$basetexture" "VGUI/crew/big/germany-2"
+	"$nocull" 1
+	"$alphatest" 1
+}

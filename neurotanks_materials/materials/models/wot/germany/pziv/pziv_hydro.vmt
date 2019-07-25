@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\wot\germany\pziv\PzIV_Hydro"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+}

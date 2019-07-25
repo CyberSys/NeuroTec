@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\Killstr3aKs\WoT\Israeli\Merkava_IV\MerkavaT_2"
+	"$bumpmap" "models\Killstr3aKs\WoT\Israeli\Merkava_IV\MerkavaT_NM"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+}

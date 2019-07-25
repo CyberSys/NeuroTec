@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\Killstr3aKs\WoT\American\AA_launcher\AAR2_defuse"
+	"$bumpmap" "models\Killstr3aKs\WoT\American\AA_launcher\AAR2_normal"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+}

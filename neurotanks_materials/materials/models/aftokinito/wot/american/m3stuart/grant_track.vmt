@@ -1,0 +1,8 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/aftokinito/WoT/American/M3Stuart/Grant_track"
+	"$bumpmap" "models/aftokinito/WoT/American/M3Stuart/Grant_track_NM"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+	"$alphatest" 1
+}

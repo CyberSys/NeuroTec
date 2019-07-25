@@ -1,0 +1,18 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\2S7\2s7_pion"
+	"$model" 1
+	"$bumpmap" "models\2S7\2s7_pion_normal"
+	"$envmap"	"env_cubemap"
+	"$normalmapalphaenvmapmask"	"1"
+	"$envmaptint"	"[ 0.01 0.01 0.01]"
+	"$phong" "1"
+	"$phongexponent" "100"
+	"$phongboost" "1"	
+	"$phongfresnelranges"	"[.3 1 7]"
+
+	// Rim lighting parameters
+	"$rimlight" "1"												// To enable rim lighting (requires phong)
+	"$rimlightexponent" "300"										// Exponent for phong component of rim lighting	
+	"$rimlightboost" "0.02"									// Boost for ambient cube component of rim lighting
+}

@@ -1,0 +1,8 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/haxxer/hovercar/Car_Cinematic_Spectre_Diff"
+	"$bumpmap" "models/haxxer/hovercar/Car_Cinematic_Norm"
+
+	"$phongexponenttexture" "models/haxxer/hovercar/Car_Cinematic_Spec"
+
+}

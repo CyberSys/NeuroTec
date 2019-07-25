@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\wot\russians\kv1s\KV-1s"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+}

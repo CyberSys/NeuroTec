@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$basetexture"	"models\wot\germany\panzeri\PzI"
+        "$bumpmap"     "models\wot\germany\panzeri\PzI_NM" 
+}

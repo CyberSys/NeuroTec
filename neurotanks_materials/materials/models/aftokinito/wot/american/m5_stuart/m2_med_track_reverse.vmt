@@ -1,0 +1,17 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/aftokinito/WoT/American/M5_Stuart/M2_med_track"
+	"$bumpmap" "models/aftokinito/WoT/American/M5_Stuart/M2_med_track_NM"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+    "$alphatest" 1
+		"Proxies"
+      	  {
+             	   "TextureScroll"
+              	  {
+                        "texturescrollvar" "$baseTextureTransform"
+                        "texturescrollrate" 3.05
+                        "texturescrollangle" 90
+              	  }
+       }	
+}

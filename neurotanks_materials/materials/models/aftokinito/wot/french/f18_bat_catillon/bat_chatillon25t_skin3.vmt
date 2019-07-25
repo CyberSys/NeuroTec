@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/aftokinito/WoT/French/F18_Bat_Catillon/Bat_Chatillon25t_skin3"
+	"$bumpmap" "models/aftokinito/WoT/French/F18_Bat_Catillon/Bat_Chatillon25t_NM"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+}

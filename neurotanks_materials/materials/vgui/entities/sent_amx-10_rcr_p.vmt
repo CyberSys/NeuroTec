@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+	"$basetexture"		"vgui/entities/sent_AMX-10_RCR_p"
+	"$vertexcolor" 		1
+	"$vertexalpha" 		1
+	"$nolod" 		1
+}

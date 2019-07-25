@@ -1,0 +1,18 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\T-80u\t80_new_trax_winter"
+	"$bumpmap" "models\T-80u\t80_new_trax_normal"
+	"$model" 1
+	"$alphatest" 1
+	"$nocull" 1
+	"$halflambert" "1"
+	"$phong" "1"
+	"$phongexponent" "100"
+	"$phongboost" ".5"	
+	"$phongfresnelranges"	"[.3 1 7]"
+
+	// Rim lighting parameters
+	"$rimlight" "1"												// To enable rim lighting (requires phong)
+	"$rimlightexponent" "300"										// Exponent for phong component of rim lighting	
+	"$rimlightboost" "0.15"	
+}

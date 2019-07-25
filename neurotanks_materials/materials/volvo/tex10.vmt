@@ -1,0 +1,8 @@
+"vertexLitGeneric"
+{
+        $basetexture "volvo/tex10"
+	$envmap env_cubemap
+	$envmapmask "volvo/volvo4"
+	$envmapcontrast 1
+        $model 1
+}

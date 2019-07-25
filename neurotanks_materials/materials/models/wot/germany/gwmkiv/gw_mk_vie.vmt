@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$basetexture"	"models\wot\germany\gwmkiv\GW_Mk_VIe"
+        "$bumpmap"     "models\wot\germany\gwmkiv\GW_Mk_VIe_NM" 
+}

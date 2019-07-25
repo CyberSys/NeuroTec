@@ -1,0 +1,16 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/WoT/German/Panzer II/PzII_2"
+	"$bumpmap" "models/WoT/German/Panzer II/PzII_2_NM"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+	"$phong" 1
+	"$phongexponent" 33
+	"$phongexponenttexture" "models\beat the zombie\WoT\German\Panzer II/PzII_2_SM"
+	"$phongboost" 2
+	"$phongfresnelranges" "[0.05 0.5 0.5]"
+	"$detail" "detail/metal_detail_01"
+	"$detailscale" 4.283
+	"$detailblendfactor" .65
+	"$detailblendmode" 0
+}

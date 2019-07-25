@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/aftokinito/WoT/French/F18_Bat_Catillon/Bat_Chatillon25t_track"
+	"$bumpmap" "models/aftokinito/WoT/French/F18_Bat_Catillon/Bat_Chatillon25t_track_NM"
+	"$nocull" "1"
+}

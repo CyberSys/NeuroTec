@@ -1,0 +1,19 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "GmodModels/minitank_tread"
+	"$model" "1"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+    "$alphatest" 1
+	"Proxies"
+      	  {
+             	   "TextureScroll"
+              	  {
+                        "texturescrollvar" "$baseTextureTransform"
+                        "texturescrollrate" 2.395
+                        "texturescrollangle" 90
+              	  }
+       }
+	 
+}
+

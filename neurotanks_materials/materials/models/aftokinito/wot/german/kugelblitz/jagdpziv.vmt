@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/aftokinito/WoT/German/Kugelblitz/JagdPzIV"
+	"$bumpmap" "models/aftokinito/WoT/German/Kugelblitz/JagdPzIV_NM"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+}

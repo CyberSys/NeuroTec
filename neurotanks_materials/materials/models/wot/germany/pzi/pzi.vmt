@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\wot\germany\pzi\PzI"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+}

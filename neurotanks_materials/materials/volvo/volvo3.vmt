@@ -1,0 +1,5 @@
+"vertexLitGeneric"
+{
+        $basetexture "volvo/volvo3"
+        $model 1
+}

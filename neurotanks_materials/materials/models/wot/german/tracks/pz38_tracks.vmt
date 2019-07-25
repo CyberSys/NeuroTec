@@ -1,0 +1,12 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/WoT/German/Tracks/Pz38_tracks"
+	"$bumpmap" "models/WoT/German/Tracks/Pz38_tracks_NM"
+	"$surfaceprop" "Metal"
+	"$alphatest" 1
+	"$nocull" 1
+	"$phong" 1
+	"$phongexponent" 33
+	"$phongexponenttexture" "models\WoT\German\Tracks/B-1bis_captured_tracks_SM"
+	"$phongboost" 2
+}

@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/props_vehicles/Terminator/hktank/meatcaphead"
+$alphatest 1
+}

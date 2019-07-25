@@ -1,0 +1,6 @@
+"vertexLitGeneric"
+{
+	"$basetexture" "models/BF2/dpv/jeep_faav_c5"
+	"$bumpmap" "models/bf2/dpv/jeep_faav_normal"
+	"$nocull" 1
+}

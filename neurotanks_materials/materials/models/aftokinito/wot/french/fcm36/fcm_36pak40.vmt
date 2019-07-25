@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/aftokinito/WoT/French/FCM36/FCM_36Pak40"
+	"$bumpmap" "models/aftokinito/WoT/French/FCM36/FCM_36Pak40_NM"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+}

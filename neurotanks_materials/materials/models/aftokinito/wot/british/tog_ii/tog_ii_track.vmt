@@ -1,0 +1,8 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/aftokinito/WoT/British/TOG_II/TOG_II_track"
+	"$bumpmap" "models/aftokinito/WoT/British/TOG_II/TOG_II_track_NM"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+    "$alphatest" 1
+}

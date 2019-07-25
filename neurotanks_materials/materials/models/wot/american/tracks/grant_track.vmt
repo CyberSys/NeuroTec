@@ -1,0 +1,8 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/beat the zombie/WoT/American/Tracks/Grant_track"
+	"$bumpmap" "models/beat the zombie/WoT/American/Tracks/Grant_track_NM"
+	"$surfaceprop" "Metal"
+	"$alphatest" 1
+	"$nocull" 1
+}

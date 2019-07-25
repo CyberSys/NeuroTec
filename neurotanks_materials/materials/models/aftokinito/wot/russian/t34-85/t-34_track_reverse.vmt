@@ -1,0 +1,17 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/aftokinito/WoT/Russian/T34-85/T-34_track"
+	"$bumpmap" "models/aftokinito/WoT/Russian/T34-85/T-34_track_NM"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+    "$alphatest" 1
+    "Proxies"
+        {
+                "TextureScroll"
+                {
+                        "texturescrollvar" "$baseTextureTransform"
+                        "texturescrollrate" 0.65
+                        "texturescrollangle" 90
+                }
+       }
+}

@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/aftokinito/NeuroTanks/Russian/BMP-3/modul"
+	"$bumpmap" "models/aftokinito/NeuroTanks/Russian/BMP-3/modul_bump"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+}

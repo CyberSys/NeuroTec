@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+	"$basetexture"		"vgui/shells/HIGH_EXPLOSIVE_PREMIUM"
+	"$vertexcolor" 		1
+	"$vertexalpha" 		1
+	"$nolod" 		1
+}

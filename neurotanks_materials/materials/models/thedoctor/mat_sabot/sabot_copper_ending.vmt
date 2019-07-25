@@ -1,0 +1,12 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/thedoctor/mat_sabot/sabot_copper_ending"
+	"$surfaceprop" "metal"
+	"$model" 1
+	"$phong" 1
+	"$envmaptint" "[0.5 0.5 0.5]"
+	"$envmap" "env_cubemap"
+	"$envmapmask"		"models/thedoctor/mat_sabot/sabot_copper_ending_SPEC"
+		
+}
+

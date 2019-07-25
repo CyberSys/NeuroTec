@@ -1,0 +1,8 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\Killstr3aKs\WoT\French\Chatillon155_58/Bat_Chatillon25t_track"
+	"$bumpmap" "models\Killstr3aKs\WoT\French\Chatillon155_58/Bat_Chatillon25t_track_NM"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+    "$alphatest" 1
+}

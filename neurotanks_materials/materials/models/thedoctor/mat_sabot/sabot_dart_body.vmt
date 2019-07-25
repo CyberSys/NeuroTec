@@ -1,0 +1,14 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/thedoctor/mat_sabot/sabot_dart_body"
+	"$surfaceprop" "metal"
+	"$model" 1
+	"$phong" 1
+	"$ssbump" 1
+	"$bumpmap" "models/thedoctor/mat_sabot/sabot_dart_body_NRM"
+	"$normalmapalphaenvmapmask" 1
+	"$envmaptint" "[0.3 0.3 0.3]"
+	"$envmap" "env_cubemap"
+	"$envmapmask"		"models/thedoctor/mat_sabot/sabot_dart_body_SPEC"
+}
+

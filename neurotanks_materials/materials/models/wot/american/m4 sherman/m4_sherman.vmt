@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/WoT/American/M4 Sherman/M4_Sherman"
+	"$bumpmap" "models/WoT/American/M4 Sherman/M4_Sherman_NM"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+}

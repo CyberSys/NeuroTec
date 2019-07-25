@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\vehicles\smithy285\bf3\zbd_09\kit"
+	"$bumpmap" "models\vehicles\smithy285\bf3\zbd_09\kit_n"
+	"$surfaceprop" "carpet"
+}

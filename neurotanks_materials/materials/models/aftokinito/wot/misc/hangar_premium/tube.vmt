@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/aftokinito/WoT/Misc/Hangar_Premium/tube"
+	"$bumpmap" "models/aftokinito/WoT/Misc/Hangar_Premium/tube_NM"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+}

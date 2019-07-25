@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$basetexture"	"models\wot\russians\su-85i\Hummel_track"
+        "$bumpmap"     "models\wot\russians\su-85i\Hummel_track_NM" 
+}

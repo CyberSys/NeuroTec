@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/aftokinito/NeuroTanks/German/L912/5t_planei"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+}

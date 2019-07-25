@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/aftokinito/WoT/American/M18_Hellcat/M18_Hellcat"
+	"$bumpmap" "models/aftokinito/WoT/American/M18_Hellcat/M18_Hellcat_NM"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+}

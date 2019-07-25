@@ -1,0 +1,17 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/aftokinito/WoT/German/H39_Stuka/H39_track"
+	"$bumpmap" "models/aftokinito/WoT/German/H39_Stuka/H39_track_NM"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+    "$alphatest" 1
+	"Proxies"
+      	  {
+             	   "TextureScroll"
+              	  {
+                        "texturescrollvar" "$baseTextureTransform"
+                        "texturescrollrate" 2.70
+                        "texturescrollangle" -90
+              	  }
+       }	
+}

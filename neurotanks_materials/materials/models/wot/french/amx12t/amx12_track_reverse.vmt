@@ -1,0 +1,15 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/wot/french/amx12t/AMX12_track"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+		"Proxies"
+      	  {
+             	   "TextureScroll"
+              	  {
+                        "texturescrollvar" "$baseTextureTransform"
+                        "texturescrollrate" 0.95
+                        "texturescrollangle" 90
+              	  }
+       }	
+}

@@ -1,0 +1,31 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/props_vehicles/Terminator/salvationhktank/slow_hk_tank_wheel"
+	"$bumpmap" "models/props_vehicles/Terminator/salvationhktank/slow_hk_tank_wheel_bump"
+
+ 	"$phong" "1"
+	"$phongexponent" "7"
+	"$phongboost"	"2.5"
+	"$phongfresnelranges"	"[.15 .45 1]"
+    "$angle" 0.0
+    "$translate" "[0.0 0.0]"
+    "$center" "[0.5 0.5]"
+
+    "Proxies"
+    {
+        "LinearRamp"
+        {
+            "rate" 150
+            "initialValue" 0.0
+            "resultVar" "$angle"
+        }
+
+        "TextureTransform"
+        {
+            "translateVar" "$translate" // we don't need this, but it's not optional
+            "rotateVar" "$angle"
+            "centerVar" "$center"
+            "resultVar" "$basetexturetransform"
+        }
+    } 
+}

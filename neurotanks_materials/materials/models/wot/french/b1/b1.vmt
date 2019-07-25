@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/WoT/French/b1/B1"
+	"$bumpmap" "models/WoT/French/b1/B1_NM"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+}

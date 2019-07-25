@@ -1,0 +1,12 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/beat the zombie/WoT/German/Tracks/H39_track"
+	"$bumpmap" "models/beat the zombie/WoT/German/Tracks/H39_track_NM"
+	"$surfaceprop" "Metal"
+	"$alphatest" 1
+	"$nocull" 1
+	"$phong" 1
+	"$phongexponent" 33
+	"$phongexponenttexture" "models\beat the zombie\WoT\German\Tracks/H39_track_SM"
+	"$phongboost" 2
+}

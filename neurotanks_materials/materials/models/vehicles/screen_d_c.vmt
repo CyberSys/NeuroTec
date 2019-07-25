@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+	"$alphatest" "1"
+	"$basetexture" "models/vehicles/screen_d_c"
+	"$normalmap" "models/vehicles/$identitynormalmap"
+	"$nocull" "1"
+}

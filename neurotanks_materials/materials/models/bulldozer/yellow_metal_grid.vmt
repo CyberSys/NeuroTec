@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\Bulldozer\yellow_metal_grid"
+	"$nocull" "1"
+}

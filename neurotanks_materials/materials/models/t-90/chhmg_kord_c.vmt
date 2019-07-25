@@ -1,0 +1,16 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\T-90\CHHMG_KORD_C"
+	"$bumpmap" "models\T-90\CHHMG_KORD_n"
+	"$halflambert" 1
+	"$nocull" "1"
+	"$phong" "1"
+	"$phongexponent" "25"
+	"$phongboost" "0.75"	
+	"$phongfresnelranges"	"[.3 1 7]"
+	"$halflambert" "1"
+
+	"$rimlight" "1"												// To enable rim lighting (requires phong)
+	"$rimlightexponent" "75"										// Exponent for phong component of rim lighting	
+	"$rimlightboost" "0.07"	
+}

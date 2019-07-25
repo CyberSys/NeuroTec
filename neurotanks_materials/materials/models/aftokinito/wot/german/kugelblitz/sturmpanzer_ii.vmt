@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/aftokinito/WoT/German/Kugelblitz/Sturmpanzer_II"
+	"$bumpmap" "models/aftokinito/WoT/German/Kugelblitz/Sturmpanzer_II_NM"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+}

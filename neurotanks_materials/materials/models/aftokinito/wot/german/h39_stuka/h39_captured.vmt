@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/aftokinito/WoT/German/H39_Stuka/H39_captured"
+	"$bumpmap" "models/aftokinito/WoT/German/H39_Stuka/H39_captured_NM"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+}

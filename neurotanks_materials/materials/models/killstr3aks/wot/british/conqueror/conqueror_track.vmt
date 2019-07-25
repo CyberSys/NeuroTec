@@ -1,0 +1,8 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\Killstr3aKs\WoT\British\Conqueror\Conqueror_track"
+	"$bumpmap" "models\Killstr3aKs\WoT\British\Conqueror\Conqueror_track_NM"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+    "$alphatest" 1
+}

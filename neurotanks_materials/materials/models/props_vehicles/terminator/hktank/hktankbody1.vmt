@@ -1,0 +1,17 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/props_vehicles/Terminator/hktank/HKTankBody1"
+	"$bumpmap" "models/props_vehicles/Terminator/hktank/HKTankBody1_n"
+	"$envmap" "env_cubemap"
+	"$normalmapalphaenvmapmask" 1
+	"$envmapfresnel" "1"
+	"$envmapFresnelMinMaxExp" "[.5 .6 .4]"
+	"$envmaptint" "[.3 .3 .3]"
+	"$envmapcontrast" ".5"
+	"$envmapsaturation" ".2"
+
+	"$phong" "1"
+	"$phongboost" "2"
+	"$phongexponent" "120"
+	"$phongfresnelranges" "[1 1 1]"
+}

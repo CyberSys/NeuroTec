@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/aftokinito/WoT/German/Kugelblitz/Leichter Flakpanzer IV Kugelblitz_2"
+	"$bumpmap" "models/aftokinito/WoT/German/Kugelblitz/Leichter Flakpanzer IV Kugelblitz_2_NM"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+}

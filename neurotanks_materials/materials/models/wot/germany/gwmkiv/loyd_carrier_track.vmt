@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$basetexture"	"models\wot\germany\gwmkiv\Loyd_Carrier_track"
+        "$bumpmap"     "models\wot\germany\gwmkiv\Loyd_Carrier_track_NM" 
+}

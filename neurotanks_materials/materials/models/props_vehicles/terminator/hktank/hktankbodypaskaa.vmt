@@ -1,0 +1,11 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/props_vehicles/Terminator/hktank/HKTankBody0"
+	"$bumpmap" "models/props_vehicles/Terminator/hktank/HKTankBody0_n"
+
+$color2 "[1.5 1.5 1.5]"
+$detail "models/props_vehicles/Terminator/hktank/HKTanklights"
+$detailscale 1
+$detailblendfactor "1.5"
+$detailblendmode 5
+}

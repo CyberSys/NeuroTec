@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/aftokinito/RO2/German/Pz4/Driver_Periscope_reflection_image"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+}

@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\wot\germany\waffentragerE-100\E100_track"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+}

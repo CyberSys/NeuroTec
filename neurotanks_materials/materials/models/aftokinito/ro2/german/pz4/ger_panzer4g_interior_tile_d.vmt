@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/aftokinito/RO2/German/Pz4/Ger_Panzer4G_Interior_Tile_D"
+	"$bumpmap" "models/aftokinito/RO2/German/Pz4/Ger_Panzer4G_Interior_Tile_N"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+}

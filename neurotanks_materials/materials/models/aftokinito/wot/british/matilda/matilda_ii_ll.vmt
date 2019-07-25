@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/aftokinito/WoT/British/Matilda/Matilda_II_LL"
+	"$bumpmap" "models/aftokinito/WoT/British/Matilda/Matilda_II_LL_NM"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+}

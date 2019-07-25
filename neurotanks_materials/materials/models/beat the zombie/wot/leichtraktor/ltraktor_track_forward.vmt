@@ -1,0 +1,16 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/beat the zombie/WoT/leichtraktor/Ltraktor_track"
+	"$surfaceprop" "Metal"
+	"$alphatest" 1
+	"$nocull" 1
+		"Proxies"
+      	  {
+             	   "TextureScroll"
+              	  {
+                        "texturescrollvar" "$baseTextureTransform"
+                        "texturescrollrate" 1.95
+                        "texturescrollangle" -90
+              	  }
+       }	
+}

@@ -1,0 +1,17 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/aftokinito/WoT/Russian/T28/T-28_track"
+	"$bumpmap" "models/aftokinito/WoT/Russian/T28/T-28_track_NM"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+    "$alphatest" 1
+    "Proxies"
+        {
+                "TextureScroll"
+                {
+                        "texturescrollvar" "$baseTextureTransform"
+                        "texturescrollrate" 1.54
+                        "texturescrollangle" 90
+                }
+       }
+}

@@ -1,0 +1,17 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/aftokinito/NeuroTanks/American/MLRS/d1"
+	"$bumpmap" "models/aftokinito/NeuroTanks/American/MLRS/d2"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+    "$alphatest" 1
+    "Proxies"
+        {
+                "TextureScroll"
+                {
+                        "texturescrollvar" "$baseTextureTransform"
+                        "texturescrollrate" 1.54
+                        "texturescrollangle" 90
+                }
+       }	
+}

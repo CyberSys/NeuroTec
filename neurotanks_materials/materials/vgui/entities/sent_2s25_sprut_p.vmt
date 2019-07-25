@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+	"$basetexture" "vgui/entities/sent_2S25_Sprut_p"
+	"$nolod" 1
+	"$vertexalpha" 1
+	"$vertexcolor" 1
+}

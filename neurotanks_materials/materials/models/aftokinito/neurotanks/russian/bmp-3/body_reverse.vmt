@@ -1,0 +1,17 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/aftokinito/NeuroTanks/Russian/BMP-3/body"
+	"$bumpmap" "models/aftokinito/NeuroTanks/Russian/BMP-3/body_bump"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+    "$alphatest" 1
+    "Proxies"
+        {
+                "TextureScroll"
+                {
+                        "texturescrollvar" "$baseTextureTransform"
+                        "texturescrollrate" 1.54
+                        "texturescrollangle" 90
+                }
+       }	
+}

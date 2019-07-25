@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/beat the zombie/WoT/German/jagdpanther/jagdpanther"
+	"$bumpmap" "models/beat the zombie/WoT/German/jagdpanther/jagdpanther_NM"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+}

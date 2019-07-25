@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\Bulldozer\drill_machine_seat"
+	"$nocull" "1"
+}

@@ -1,0 +1,16 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/WoT/German/Tracks/Tiger_II_track"
+	"$surfaceprop" "Metal"
+	"$alphatest" 1
+	"$nocull" 1
+		"Proxies"
+      	  {
+             	   "TextureScroll"
+              	  {
+                        "texturescrollvar" "$baseTextureTransform"
+                        "texturescrollrate" 0.95
+                        "texturescrollangle" 90
+              	  }
+       }	
+}

@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/aftokinito/WoT/Russian/T28/T-28"
+	"$bumpmap" "models/aftokinito/WoT/Russian/T28/T-28_NM"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+}

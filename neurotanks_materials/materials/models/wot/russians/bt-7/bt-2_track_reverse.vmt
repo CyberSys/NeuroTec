@@ -1,0 +1,16 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/wot/russians/bt-7/BT-2_track"
+	"$surfaceprop" "Metal"
+	"$alphatest" 1
+	"$nocull" 1
+		"Proxies"
+      	  {
+             	   "TextureScroll"
+              	  {
+                        "texturescrollvar" "$baseTextureTransform"
+                        "texturescrollrate" 0.95
+                        "texturescrollangle" 90
+              	  }
+       }	
+}

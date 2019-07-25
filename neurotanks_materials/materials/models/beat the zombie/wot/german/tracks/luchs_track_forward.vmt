@@ -1,0 +1,16 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/beat the zombie/WoT/German/tracks/Luchs_track"
+	"$surfaceprop" "Metal"
+	"$alphatest" 1
+	"$nocull" 1
+		"Proxies"
+      	  {
+             	   "TextureScroll"
+              	  {
+                        "texturescrollvar" "$baseTextureTransform"
+                        "texturescrollrate" 0.95
+                        "texturescrollangle" -90
+              	  }
+       }	
+}

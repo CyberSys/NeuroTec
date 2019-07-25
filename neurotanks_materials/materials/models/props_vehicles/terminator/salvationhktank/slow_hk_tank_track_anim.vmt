@@ -1,0 +1,21 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/props_vehicles/Terminator/salvationhktank/slow_hk_tank_track"
+	"$nodecal" 1
+	"$bumpmap" "models/props_vehicles/Terminator/salvationhktank/slow_hk_tank_track_bump"
+
+ 	"$phong" "1"
+	"$phongexponent" "7"
+	"$phongboost"	"2.5"
+	"$phongfresnelranges"	"[.15 .45 1]"
+	"Proxies"
+	{
+		"TextureScroll"
+
+		{
+			"texturescrollvar" "$baseTextureTransform"
+			"texturescrollrate" .2
+			"texturescrollangle" 0.00
+		}
+	}
+}

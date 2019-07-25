@@ -1,0 +1,17 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\Killstr3aKs\WoT\British\Challenger_2\kette_co"
+	"$bumpmap" "models\Killstr3aKs\WoT\British\Challenger_2\kette_norm"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+    "$alphatest" 1
+		"Proxies"
+      	  {
+             	   "TextureScroll"
+              	  {
+                        "texturescrollvar" "$baseTextureTransform"
+                        "texturescrollrate" 3.05
+                        "texturescrollangle" -90
+              	  }
+       }	
+}

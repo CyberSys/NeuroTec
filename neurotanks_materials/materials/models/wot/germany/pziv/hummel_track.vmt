@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\wot\germany\pziv\Hummel_track"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+}

@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/aftokinito/WoT/American/Wolverine/M10_Wolverine"
+	"$bumpmap" "models/aftokinito/WoT/American/Wolverine/M10_Wolverine_NM"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+}

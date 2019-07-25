@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\Bulldozer\side_catwalk"
+	"$nocull" "1"
+}

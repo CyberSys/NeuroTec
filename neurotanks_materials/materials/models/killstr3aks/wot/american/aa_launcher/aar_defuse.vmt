@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\Killstr3aKs\WoT\American\AA_launcher\AAR_defuse"
+	"$surfaceprop" "Metal"
+	"$nocull" 1
+}
