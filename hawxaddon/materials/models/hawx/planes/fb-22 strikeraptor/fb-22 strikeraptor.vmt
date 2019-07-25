@@ -1,0 +1,10 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/hawx/planes/FB-22 StrikeRaptor/FB-22 StrikeRaptor"
+	"$bumpmap" "models/hawx/planes/FB-22 StrikeRaptor/FB-22 StrikeRaptor_bump"
+
+	"$phong" "1"
+	"$phongboost" "1"	
+	"$phongfresnelranges"	"[1 1 1]"
+	"$phongalbedotint" "1"
+}

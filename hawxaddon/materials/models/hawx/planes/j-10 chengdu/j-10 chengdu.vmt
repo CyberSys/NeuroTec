@@ -1,0 +1,10 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/hawx/planes/J-10 Chengdu/J-10 Chengdu"
+	"$bumpmap" "models/hawx/planes/J-10 Chengdu/J-10 Chengdu_bump"
+
+	"$phong" "1"
+	"$phongboost" "1"	
+	"$phongfresnelranges"	"[1 1 1]"
+	"$phongalbedotint" "1"
+}

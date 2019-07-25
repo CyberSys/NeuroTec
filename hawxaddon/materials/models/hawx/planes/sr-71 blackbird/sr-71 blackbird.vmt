@@ -1,0 +1,10 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/hawx/planes/SR-71 Blackbird/SR-71 Blackbird"
+	"$bumpmap" "models/hawx/planes/SR-71 Blackbird/SR-71 Blackbird_bump"
+
+	"$phong" "1"
+	"$phongboost" "1"	
+	"$phongfresnelranges"	"[1 1 1]"
+	"$phongalbedotint" "1"
+}

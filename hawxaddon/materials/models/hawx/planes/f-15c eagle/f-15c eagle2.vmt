@@ -1,0 +1,10 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/hawx/planes/F-15C Eagle/F-15C Eagle2"
+	"$bumpmap" "models/hawx/planes/F-15C Eagle/F-15C Eagle_bump"
+
+	"$phong" "1"
+	"$phongboost" "1"	
+	"$phongfresnelranges"	"[1 1 1]"
+	"$phongalbedotint" "1"
+}

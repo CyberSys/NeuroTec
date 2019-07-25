@@ -1,0 +1,10 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/hawx/planes/Su-34 Fullback/Su-34 Fullback"
+	"$bumpmap" "models/hawx/planes/Su-34 Fullback/Su-34 Fullback_bump"
+
+	"$phong" "1"
+	"$phongboost" "1"	
+	"$phongfresnelranges"	"[1 1 1]"
+	"$phongalbedotint" "1"
+}

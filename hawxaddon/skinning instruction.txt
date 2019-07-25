@@ -1,0 +1,21 @@
+		How can I add more skin?
+
+
+If you want to add more custom skins, you just have to copy your texture into the plane directory and rename it like this
+
+ex: FA-22 Raptor.vtf	--->	FA-22 Raptor15.vtf
+
+Do the same manipulation for the ".vmt" file and put this in it:
+
+
+Note:
+
+The "*" is a number (between 2 and 15)
+You should begin with 15 and decrease the number if you add more than a plane's skin (you can change the original skins also by changing the texture's name).
+
+
+
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/hawx/planes/theplaneyouwanttoreskin/theplaneyouwanttoreskin*"
+}

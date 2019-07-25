@@ -1,0 +1,10 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/hawx/planes/AV-8B Harrier II/AV-8B Harrier II"
+	"$bumpmap" "models/hawx/planes/AV-8B Harrier II/AV-8B Harrier II_bump"
+
+	"$phong" "1"
+	"$phongboost" "1"	
+	"$phongfresnelranges"	"[1 1 1]"
+	"$phongalbedotint" "1"
+}

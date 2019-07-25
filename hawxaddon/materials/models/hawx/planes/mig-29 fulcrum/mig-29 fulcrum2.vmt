@@ -1,0 +1,10 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/hawx/planes/Mig-29 Fulcrum/Mig-29 Fulcrum2"
+	"$bumpmap" "models/hawx/planes/Mig-29 Fulcrum/Mig-29 Fulcrum_bump"
+
+	"$phong" "1"
+	"$phongboost" "1"	
+	"$phongfresnelranges"	"[1 1 1]"
+	"$phongalbedotint" "1"
+}

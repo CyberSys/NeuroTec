@@ -1,0 +1,10 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/hawx/planes/Su-27 Flanker/Su-27 Flanker2"
+	"$bumpmap" "models/hawx/planes/Su-27 Flanker/Su-27 Flanker_bump"
+
+	"$phong" "1"
+	"$phongboost" "1"	
+	"$phongfresnelranges"	"[1 1 1]"
+	"$phongalbedotint" "1"
+}

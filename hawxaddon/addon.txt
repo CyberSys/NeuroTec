@@ -1,0 +1,11 @@
+"AddonInfo"
+{
+	"name"				"Tom Clancy's HAWX Models"
+	"version"			"1.0"
+	"up_date"			"December 2012"
+	"author_name"		"StarChick"
+	"author_email"		"starchick971@gmail.com"
+	"author_url"		""
+	"info"				"The Huge Tom Clancy's H.A.W.X model's pack. There is all the playable planes from the original game and their weapons. Have Fun!			DO NOT UPLOAD THIS PACK!"
+	"override"			"0"
+}

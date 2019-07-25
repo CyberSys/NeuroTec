@@ -1,0 +1,10 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/hawx/planes/F-117 Nighthawk/F-117 Nighthawk"
+	"$bumpmap" "models/hawx/planes/F-117 Nighthawk/F-117 Nighthawk_bump"
+
+	"$phong" "1"
+	"$phongboost" "1"	
+	"$phongfresnelranges"	"[1 1 1]"
+	"$phongalbedotint" "1"
+}

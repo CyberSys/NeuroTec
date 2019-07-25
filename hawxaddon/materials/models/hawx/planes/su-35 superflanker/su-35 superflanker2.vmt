@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/hawx/planes/Su-35 SuperFlanker/Su-35 SuperFlanker2"
+	"$bumpmap" "models/hawx/planes/Su-35 SuperFlanker/Su-35 SuperFlanker_bump"
+}
